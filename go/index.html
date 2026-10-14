@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#fbf7ef">
+  <meta name="description" content="Tutti i link XBOXY in un solo posto: scopri lo shop, gli accessori beauty e i prodotti da aggiungere alla tua routine.">
+  <link rel="canonical" href="https://go.xboxy.shop/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="XBOXY — Piccole cose. Grande vibe.">
+  <meta property="og:description" content="Scopri lo shop XBOXY e raggiungi in un tap le nostre landing prodotto.">
+  <meta property="og:url" content="https://go.xboxy.shop/">
+  <title>XBOXY | Tutti i link</title>
+  <style>
+    :root {
+      --cream: #fbf7ef;
+      --paper: #fffdf9;
+      --ink: #111111;
+      --muted: #626262;
+      --lime: #d9ff32;
+      --pink: #ffb9d7;
+      --lilac: #d9c6ff;
+      --line: #e7e0d5;
+      --shadow: 0 16px 42px rgba(17,17,17,.08);
+      --max: 560px;
+    }
+
+    * { box-sizing: border-box; }
+    html { min-height: 100%; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 7% 5%, rgba(217,255,50,.28), transparent 230px),
+        radial-gradient(ellipse at 93% 19%, rgba(255,185,215,.35), transparent 250px),
+        var(--cream);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a, button { -webkit-tap-highlight-color: transparent; }
+    a:focus-visible { outline: 3px solid #7a50db; outline-offset: 4px; }
+
+    .page {
+      width: min(var(--max), calc(100% - 32px));
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 29px 0 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3px 0 25px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 1px;
+      font-size: 1.55rem;
+      font-weight: 1000;
+      letter-spacing: -.085em;
+      line-height: 1;
+    }
+
+    .brand-box { color: #7a50db; }
+    .brand-dot {
+      width: 7px;
+      height: 7px;
+      margin-left: 5px;
+      border-radius: 50%;
+      background: var(--lime);
+      border: 1.5px solid var(--ink);
+      display: inline-block;
+      vertical-align: top;
+      transform: translateY(-10px);
+    }
+
+    .profile { text-align: center; }
+    .avatar {
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 18px;
+      border-radius: 29px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      background: var(--lime);
+      border: 2px solid var(--ink);
+      box-shadow: 5px 5px 0 var(--ink);
+      transform: rotate(-4deg);
+    }
+
+    .avatar::after {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--pink);
+      border: 1.5px solid var(--ink);
+      right: -8px;
+      top: -7px;
+    }
+
+    .avatar span {
+      font-size: 2.7rem;
+      font-weight: 1000;
+      letter-spacing: -.12em;
+      line-height: 1;
+      transform: rotate(4deg) translateX(-2px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,253,249,.86);
+      color: #424242;
+      font-size: .66rem;
+      font-weight: 900;
+      letter-spacing: .095em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      flex: 0 0 7px;
+      border-radius: 50%;
+      background: #7a50db;
+    }
+
+    h1 {
+      margin: 18px 0 11px;
+      font-size: clamp(2.25rem, 9vw, 3.15rem);
+      line-height: .99;
+      letter-spacing: -.075em;
+      font-weight: 1000;
+    }
+
+    h1 em {
+      font-style: normal;
+      position: relative;
+      z-index: 0;
+      white-space: nowrap;
+    }
+
+    h1 em::after {
+      content: "";
+      position: absolute;
+      height: .28em;
+      left: -2px;
+      right: -3px;
+      bottom: 2px;
+      background: var(--pink);
+      z-index: -1;
+      transform: rotate(-1.5deg);
+    }
+
+    .intro {
+      max-width: 390px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: .98rem;
+      line-height: 1.65;
+    }
+
+    .links { margin-top: 29px; }
+    .section-label {
+      margin: 0 0 12px 3px;
+      color: #66615c;
+      font-size: .68rem;
+      font-weight: 950;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .link-list { display: grid; gap: 12px; }
+
+    .link-card {
+      min-height: 78px;
+      padding: 12px 15px 12px 12px;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      position: relative;
+      background: var(--paper);
+      border: 1.5px solid var(--ink);
+      border-radius: 21px;
+      box-shadow: 4px 4px 0 var(--ink);
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+
+    .link-card:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 var(--ink);
+    }
+
+    .link-card.primary {
+      min-height: 86px;
+      background: var(--lime);
+      padding: 14px 17px 14px 13px;
+    }
+
+    .symbol {
+      width: 47px;
+      height: 47px;
+      flex: 0 0 47px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: #f3edff;
+      color: var(--ink);
+    }
+
+    .primary .symbol { background: rgba(255,255,255,.62); }
+    .symbol.pink { background: #ffe5ef; }
+    .symbol.lilac { background: #eee4ff; }
+    .symbol.paper { background: #f2eee7; }
+    .symbol svg { width: 25px; height: 25px; }
+
+    .link-copy {
+      min-width: 0;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .link-copy strong {
+      font-size: .98rem;
+      font-weight: 950;
+      line-height: 1.2;
+      letter-spacing: -.025em;
+    }
+
+    .link-copy span {
+      color: #5f5a54;
+      font-size: .78rem;
+      line-height: 1.35;
+    }
+
+    .primary .link-copy span { color: #333827; }
+
+    .arrow {
+      width: 31px;
+      height: 31px;
+      flex: 0 0 31px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 1px solid rgba(17,17,17,.2);
+      background: rgba(255,255,255,.52);
+      transition: transform .18s ease;
+    }
+
+    .arrow svg { width: 15px; height: 15px; }
+    .link-card:hover .arrow { transform: translateX(3px); }
+
+    .note {
+      margin: 24px 7px 0;
+      padding: 13px 15px;
+      border: 1px dashed #c9bfae;
+      border-radius: 17px;
+      color: #5f5a54;
+      text-align: center;
+      font-size: .79rem;
+      line-height: 1.55;
+    }
+
+    .note strong { color: var(--ink); }
+
+    footer {
+      margin-top: auto;
+      padding: 35px 0 5px;
+      text-align: center;
+    }
+
+    .footer-line {
+      width: 42px;
+      height: 4px;
+      border-radius: 999px;
+      margin: 0 auto 13px;
+      background: var(--lilac);
+      border: 1px solid var(--ink);
+    }
+
+    footer p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .75rem;
+      line-height: 1.7;
+    }
+
+    footer .footer-brand {
+      color: var(--ink);
+      font-size: .83rem;
+      font-weight: 950;
+      letter-spacing: -.025em;
+    }
+
+    @media (min-width: 700px) {
+      .page { padding-top: 36px; padding-bottom: 32px; }
+      .topbar { padding-bottom: 31px; }
+      .link-card { min-height: 82px; }
+      .link-card.primary { min-height: 90px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="https://xboxy.shop/" aria-label="XBOXY, vai allo shop">
+        <span>X</span><span class="brand-box">BOX</span><span>y</span><span class="brand-dot" aria-hidden="true"></span>
+      </a>
+    </header>
+
+    <section class="profile" aria-labelledby="page-title">
+      <div class="avatar" aria-hidden="true"><span>X</span></div>
+      <div class="eyebrow">Beauty finds · Accessori · Novità</div>
+      <h1 id="page-title">Piccole cose.<br><em>Grande vibe.</em></h1>
+      <p class="intro">Beauty, accessori e piccoli alleati per la tua routine. Scopri il mondo XBOXY e trova il tuo prossimo preferito.</p>
+    </section>
+
+    <section class="links" aria-label="Link XBOXY">
+      <div class="link-list">
+        <a class="link-card primary" href="https://xboxy.shop/" aria-label="Vai allo shop XBOXY">
+          <span class="symbol">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 8h16l-1.2 12H5.2L4 8Z"/><path d="M8 9V6a4 4 0 0 1 8 0v3"/>
+            </svg>
+          </span>
+          <span class="link-copy">
+            <strong>Scopri tutti i prodotti</strong>
+            <span>Entra nello shop XBOXY</span>
+          </span>
+          <span class="arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <p class="section-label">Link diretti ai prodotti</p>
+
+        <!-- Per aggiungere un prodotto: duplica un link-card, aggiorna titolo, descrizione e URL della landing pubblicata. -->
+        <a class="link-card" href="https://xboxy.shop/specchio-led.html" target="_blank" rel="noopener noreferrer" aria-label="Scopri lo Specchio LED XBOXY">
+          <span class="symbol pink">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="6" y="2.5" width="12" height="16" rx="5.5"/><path d="M12 18.5V22m-4 0h8M9 7c.7-1.2 1.7-1.8 3-1.8"/>
+            </svg>
+          </span>
+          <span class="link-copy">
+            <strong>Specchio LED XBOXY</strong>
+            <span>Il tuo alleato per il make-up</span>
+          </span>
+          <span class="arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <a class="link-card" href="https://xboxy.shop/massaggiatore-viso-golden-pulse.html" target="_blank" rel="noopener noreferrer" aria-label="Scopri il Beauty Bar 24K Golden Pulse">
+          <span class="symbol lilac">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3v5"/><path d="M5 8h14"/><path d="M7 8c.4 5.1 1.7 8.8 5 12 3.3-3.2 4.6-6.9 5-12"/><path d="M9 12h6"/>
+            </svg>
+          </span>
+          <span class="link-copy">
+            <strong>Beauty Bar 24K Golden Pulse</strong>
+            <span>Massaggiatore viso a forma di T</span>
+          </span>
+          <span class="arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <a class="link-card" href="https://xboxy.shop/mollette-duckbill-colorate.html" target="_blank" rel="noopener noreferrer" aria-label="Scopri i fermagli Duckbill colorati">
+          <span class="symbol paper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 5.5c0-1.1.9-2 2-2h8.5a3.5 3.5 0 0 1 0 7H7a2 2 0 0 1-2-2v-3Z"/><path d="M8 8.5h10.5a3.5 3.5 0 0 1 0 7H10a2 2 0 0 1-2-2v-5Z"/><path d="M10 11.5h6"/>
+            </svg>
+          </span>
+          <span class="link-copy">
+            <strong>Fermagli Duckbill colorati</strong>
+            <span>Un dettaglio in più per i tuoi capelli</span>
+          </span>
+          <span class="arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </a>
+      </div>
+
+      <p class="note"><strong>Salva questo link.</strong><br>Aggiungeremo qui le nuove landing XBOXY man mano che arrivano.</p>
+    </section>
+
+    <footer>
+      <div class="footer-line" aria-hidden="true"></div>
+      <p class="footer-brand">XBOXY · Piccole cose. Buona energia.</p>
+      <p><a href="https://xboxy.shop/">xboxy.shop</a></p>
+    </footer>
+  </main>
+</body>
+</html>
