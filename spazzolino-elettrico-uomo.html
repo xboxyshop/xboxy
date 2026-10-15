@@ -114,9 +114,10 @@
 
 
     .hero-product-image{z-index:1;position:relative;width:min(78%,410px);max-height:460px;object-fit:contain;filter:drop-shadow(0 19px 18px rgba(17,17,17,.16));transform:rotate(-4deg);border-radius:24px}
-    .hero-product-video{z-index:1;position:relative;display:block;width:min(78%,410px);max-height:520px;aspect-ratio:9/16;object-fit:cover;background:#171717;border:1px solid rgba(17,17,17,.12);border-radius:24px;box-shadow:var(--shadow)}
-    @media(max-width:850px){.hero-product-image{width:min(72%,360px);max-height:390px}.hero-product-video{width:min(72%,360px);max-height:480px}}
-    @media(max-width:520px){.hero-product-image{width:72%;max-height:320px}.hero-product-video{width:min(82%,330px);max-height:420px}}
+    .hero-product-fallback{z-index:0;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:block;width:min(78%,410px);max-height:520px;aspect-ratio:9/16;object-fit:cover;background:#fff;border:1px solid rgba(17,17,17,.12);border-radius:24px;box-shadow:var(--shadow)}
+    .hero-product-video{z-index:1;position:relative;display:block;width:min(78%,410px);max-height:520px;aspect-ratio:9/16;object-fit:cover;background:transparent;border:1px solid rgba(17,17,17,.12);border-radius:24px;box-shadow:var(--shadow)}
+    @media(max-width:850px){.hero-product-image{width:min(72%,360px);max-height:390px}.hero-product-fallback{width:min(72%,360px);max-height:480px}.hero-product-video{width:min(72%,360px);max-height:480px}}
+    @media(max-width:520px){.hero-product-image{width:72%;max-height:320px}.hero-product-fallback{width:min(82%,330px);max-height:420px}.hero-product-video{width:min(82%,330px);max-height:420px}}
     .product-placeholder{display:none}
 </style>
 <meta content="spazzolino elettrico azzurro uomo, spazzolino elettrico a vibrazione, spazzolino ricarica USB, spazzolino 5 modalità, timer 2 minuti" name="keywords"/><meta content="Spazzolino Elettrico Azzurro da Uomo | XBOXy" property="og:title"/><meta content="Cinque modalità di vibrazione, timer automatico da 2 minuti e ricarica USB per la routine quotidiana." property="og:description"/><meta content="https://xboxy.shop/spazzolino-elettrico-uomo-poster.jpg" property="og:image"/><meta content="product" property="og:type"/><link href="https://xboxy.shop/spazzolino-elettrico-uomo" rel="canonical"/></head>
@@ -144,7 +145,8 @@
 <div aria-label="Video dello spazzolino elettrico azzurro a vibrazione" class="visual">
 <div class="blob"></div>
 <div class="sticker">5<br/>MODALITÀ</div>
-<video class="hero-product-video" controls playsinline preload="metadata" poster="https://xboxy.shop/spazzolino-elettrico-uomo-poster.jpg" aria-label="Video dello spazzolino elettrico azzurro"><source src="https://xboxy.shop/spazzolino-elettrico-uomo.mp4" type="video/mp4"/>Il tuo browser non supporta la riproduzione video HTML5.</video>
+<img class="hero-product-fallback" src="https://xboxy.shop/spazzolino-elettrico-uomo-poster.jpg" alt="Spazzolino elettrico azzurro da uomo, primo piano" width="320" height="568" fetchpriority="high"/>
+        <video class="hero-product-video" controls playsinline preload="metadata" poster="https://xboxy.shop/spazzolino-elettrico-uomo-poster.jpg" aria-label="Video dello spazzolino elettrico azzurro"><source src="https://xboxy.shop/spazzolino-elettrico-uomo.mp4" type="video/mp4"/>Il tuo browser non supporta la riproduzione video HTML5.</video>
 <div class="tape">RICARICA USB · TIMER 2 MIN</div>
 </div>
 </section>
