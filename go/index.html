@@ -338,7 +338,19 @@
   .legal-footer{width:100%;margin-top:22px;padding-top:15px;border-top:1px solid var(--line,#e7e0d5);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;color:var(--muted,#626262);font-size:.76rem;line-height:1.55}.legal-footer p{margin:0}.legal-footer nav{display:flex;flex-wrap:wrap;gap:8px 16px}.legal-footer a{color:inherit;text-decoration:underline;text-underline-offset:3px}.legal-footer a:hover{color:var(--ink,#111)}.cookie-banner{display:none;position:fixed;z-index:9999;left:16px;right:16px;bottom:16px;width:auto;max-width:720px;margin:0 auto;padding:20px;background:var(--paper,#fffdf9);color:var(--ink,#111);border:1.5px solid var(--ink,#111);border-radius:22px;box-shadow:0 18px 65px rgba(17,17,17,.24);font:inherit;font-size:14px;line-height:1.5;text-align:left}.cookie-banner.is-visible{display:block}.cookie-banner *{box-sizing:border-box}.cookie-banner h2{margin:0 0 7px;font-size:1.18rem;line-height:1.2;letter-spacing:-.035em;color:var(--ink,#111)}.cookie-banner p{margin:0 0 12px;color:var(--muted,#626262);font-size:.89rem;line-height:1.55}.cookie-banner a{color:inherit;text-decoration:underline;text-underline-offset:3px}.cookie-banner .cookie-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:12px}.cookie-banner button{appearance:none;min-height:43px;padding:10px 12px;border:1.5px solid var(--ink,#111);border-radius:999px;background:var(--paper,#fffdf9);color:var(--ink,#111);font:inherit;font-size:.82rem;font-weight:850;line-height:1.2;cursor:pointer}.cookie-banner button[data-cookie-action="accept"],.cookie-banner button[data-cookie-action="reject"]{background:var(--lime,#d9ff32)}.cookie-banner button:hover{filter:brightness(.97)}.cookie-banner button:focus-visible,.cookie-banner input:focus-visible{outline:3px solid #7a50db;outline-offset:2px}.cookie-banner .cookie-settings{display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--line,#e7e0d5)}.cookie-banner .cookie-settings.is-open{display:block}.cookie-banner .cookie-choice{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line,#e7e0d5)}.cookie-banner .cookie-choice:last-of-type{border-bottom:0}.cookie-banner .cookie-choice input{width:18px;height:18px;flex:0 0 18px;margin:3px 0 0;accent-color:var(--ink,#111)}.cookie-banner .cookie-choice strong{display:block;font-size:.86rem;color:var(--ink,#111)}.cookie-banner .cookie-choice small{display:block;color:var(--muted,#626262);font-size:.78rem;line-height:1.45;margin-top:2px}.cookie-banner .cookie-save{width:100%;margin-top:12px;background:var(--lime,#d9ff32)}.cookie-manage-link{appearance:none;background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer}@media(max-width:540px){.cookie-banner{left:8px;right:8px;bottom:8px;padding:17px;border-radius:19px;max-height:calc(100dvh - 16px);overflow:auto}.cookie-banner .cookie-actions{grid-template-columns:1fr;gap:7px}.cookie-banner button{min-height:44px}.legal-footer{align-items:flex-start;flex-direction:column}}@media(prefers-reduced-motion:reduce){.cookie-banner *{scroll-behavior:auto!important}}
 
     .topbar{flex-direction:column;gap:12px}.shipping-note{margin:0;text-align:center;font-size:.78rem;font-weight:800;color:var(--muted);line-height:1.25}
-  </style>
+  
+/* XBOXY trust section for the narrow link-in-bio page */
+.bio-trust-section{width:min(1000px,calc(100vw - 36px));position:relative;left:50%;transform:translateX(-50%);margin:34px 0 26px;padding:30px 0 8px;border-top:1px solid var(--line,#e7e0d5)}
+.bio-trust-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.bio-trust-card{min-width:0;text-align:center;background:var(--paper,#fffdf9);border:1px solid var(--line,#e7e0d5);border-radius:20px;padding:21px 15px;box-shadow:0 8px 22px rgba(17,17,17,.045)}
+.bio-trust-icon{width:54px;height:54px;display:grid;place-items:center;border-radius:50%;margin:0 auto 14px;background:var(--lime,#d9ff32);color:var(--ink,#111)}
+.bio-trust-card:nth-child(2) .bio-trust-icon{background:var(--pink,#ffb9d7)}
+.bio-trust-card:nth-child(3) .bio-trust-icon{background:var(--lilac,#d9c6ff)}
+.bio-trust-icon svg{width:26px;height:26px;display:block}
+.bio-trust-card h2{margin:0 0 8px;font-size:.98rem;line-height:1.25;font-weight:950;letter-spacing:-.03em}
+.bio-trust-card p{margin:0;color:var(--muted,#626262);font-size:.78rem;line-height:1.55}
+@media(max-width:720px){.bio-trust-section{width:calc(100vw - 28px);margin:28px 0 22px;padding-top:23px}.bio-trust-grid{grid-template-columns:1fr;gap:11px}.bio-trust-card{display:grid;grid-template-columns:52px minmax(0,1fr);column-gap:13px;align-items:center;text-align:left;padding:15px}.bio-trust-icon{width:48px;height:48px;grid-row:1 / span 2;margin:0}.bio-trust-card h2{margin:0 0 4px;font-size:.94rem}.bio-trust-card p{font-size:.78rem}}
+</style>
 </head>
 <body>
   <main class="page">
@@ -443,6 +455,26 @@
       </div>
 
       <p class="note"><strong>Salva questo link.</strong><br>Aggiungeremo qui le nuove landing XBOXY man mano che arrivano.</p>
+    </section>
+
+    <section class="bio-trust-section" aria-label="Spedizione, assistenza e pagamenti">
+      <div class="bio-trust-grid">
+        <article class="bio-trust-card">
+          <div class="bio-trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 16.5 9 14l7.5-8.2a2.3 2.3 0 0 1 3.3 3.2L12 17l-2.3 6-3-6-4.2-.5Z"/><path d="m6.7 12.7-3.9-3.9 4.1-1.1 4.2 2.1"/></svg></div>
+          <h2>Spedizione 24/72 ore</h2>
+          <p>Spedizione gratuita in Italia per ordini da <strong>€29,99</strong>.</p>
+        </article>
+        <article class="bio-trust-card">
+          <div class="bio-trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="12" width="4" height="7" rx="2"/><rect x="17" y="12" width="4" height="7" rx="2"/><path d="M21 18c0 2-2 3-5 3h-2"/></svg></div>
+          <h2>Assistenza</h2>
+          <p>Assistenza tramite messaggistica WhatsApp per domande su prodotti e ordini.</p>
+        </article>
+        <article class="bio-trust-card">
+          <div class="bio-trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="10" width="17" height="11" rx="2.5"/><path d="M7.5 10V7a4.5 4.5 0 0 1 9 0v3"/><circle cx="12" cy="15.5" r="1.2"/></svg></div>
+          <h2>Pagamenti sicuri</h2>
+          <p>Quando acquisti tramite il checkout SumUp, il pagamento online è gestito da SumUp Limited, istituto di moneta elettronica autorizzato e regolamentato dalla Central Bank of Ireland.</p>
+        </article>
+      </div>
     </section>
 
     <footer>
