@@ -297,6 +297,7 @@
   video.querySelectorAll("source").forEach(function(source){
     source.addEventListener("error",showPoster,{once:true});
   });
+  if(video.error||video.networkState===3)showPoster();
 })();
 </script>
 </body>
