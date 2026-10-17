@@ -42,6 +42,10 @@
     .lead{max-width:540px;color:#424242;font-size:clamp(1.02rem,1.5vw,1.17rem);line-height:1.72;margin:0 0 24px}
     .hero-actions{display:flex;gap:15px;align-items:center;flex-wrap:wrap}
     .microcopy{font-size:.8rem;color:var(--muted);margin-top:18px}
+    .product-price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:0 0 21px}
+    .product-price .amount{font-size:clamp(1.9rem,3.4vw,2.45rem);font-weight:1000;letter-spacing:-.065em;line-height:1;color:var(--ink)}
+    .product-price .label{font-size:.9rem;font-weight:750;color:var(--muted)}
+    .cta-price{font-size:clamp(2rem,4vw,2.6rem);font-weight:1000;letter-spacing:-.06em;line-height:1;margin:0 auto 18px}
     .visual{position:relative;min-height:490px;display:grid;place-items:center}
     .blob{position:absolute;inset:7% 4% 4% 4%;border-radius:43% 57% 48% 52% / 48% 42% 58% 52%;background:var(--lilac);transform:rotate(5deg)}
     .sticker{position:absolute;top:5%;right:2%;z-index:2;width:106px;height:106px;background:var(--pink);border:2px solid var(--ink);border-radius:50%;display:grid;place-items:center;text-align:center;font-weight:1000;font-size:.83rem;line-height:1.05;transform:rotate(10deg);padding:14px}
@@ -139,6 +143,10 @@
 <!-- PERSONALIZZARE CON IL NOME O IL BENEFICIO PRINCIPALE REALE -->
 <h1>La tua igiene orale.<br/><em>Più smart.</em></h1>
 <p class="lead">Scopri lo <strong>spazzolino elettrico azzurro da uomo</strong>: 5 modalità, ricarica USB e timer automatico da 2 minuti con intervalli di 30 secondi. Un design compatto con setole ondulate, pensato per accompagnare la tua routine quotidiana.</p>
+<div class="product-price" aria-label="Prezzo del prodotto">
+<span class="amount">€19,99</span>
+<span class="label">Prezzo finale</span>
+</div>
 <div class="hero-actions">
 <a class="button" href="https://xboxy.shop">Acquista ora <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 <a class="button secondary" href="#caratteristiche">Scopri il prodotto</a>
@@ -216,6 +224,7 @@
 <div class="kicker">Scopri XBOXy</div>
 <h2>Pronto a dare una nuova forma alla tua routine?</h2>
 <p>Rileggi le caratteristiche e le specifiche dello spazzolino elettrico XBOXy prima di procedere all’acquisto.</p>
+<div class="cta-price" aria-label="Prezzo del prodotto">€19,99</div>
 <a class="button" href="https://xboxy.shop">Acquista ora <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </div>
 </section>
