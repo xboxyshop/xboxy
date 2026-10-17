@@ -133,13 +133,28 @@
 
 /* Promessa di spedizione sempre visibile anche su mobile */
 @media(max-width:850px){.nav{flex-wrap:wrap;gap:10px 14px}.nav-note{display:block!important;order:3;flex:0 0 100%;max-width:none;text-align:center;font-size:.76rem;line-height:1.25}.nav .button{order:2}}
+
+/* XBOXY trust section — shipping, assistance and online payments */
+.trust-section{padding:52px 0 60px;background:var(--cream,#fbf7ef)}
+.trust-section .wrap{width:min(var(--max,1180px),calc(100% - 40px));margin-inline:auto}
+.trust-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.trust-card{min-width:0;text-align:center;padding:30px 22px;background:var(--paper,#fffdf9);border:1px solid var(--line,#e7e0d5);border-radius:26px;box-shadow:0 10px 26px rgba(17,17,17,.045)}
+.trust-icon{width:68px;height:68px;display:grid;place-items:center;margin:0 auto 19px;border:1px solid rgba(17,17,17,.12);border-radius:50%;background:var(--lime,#d9ff32);color:var(--ink,#111)}
+.trust-card:nth-child(2) .trust-icon{background:var(--pink,#ffb9d7)}
+.trust-card:nth-child(3) .trust-icon{background:var(--lilac,#d9c6ff)}
+.trust-icon svg{width:30px;height:30px;display:block}
+.trust-card h3{margin:0 0 11px;font-size:1.15rem;font-weight:900;letter-spacing:-.035em;line-height:1.25;color:var(--ink,#111)}
+.trust-card p{max-width:350px;margin:0 auto;color:var(--muted,#626262);font-size:.94rem;line-height:1.7}
+.trust-card a{font-weight:800;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:760px){.trust-section{padding:34px 0 42px}.trust-section .wrap{width:min(var(--max,1180px),calc(100% - 28px))}.trust-grid{grid-template-columns:1fr;gap:13px}.trust-card{padding:25px 20px;border-radius:22px}.trust-icon{width:60px;height:60px;margin-bottom:15px}.trust-card h3{font-size:1.08rem}.trust-card p{font-size:.9rem}}
+
 </style>
 </head>
 <body>
   <div class="announcement"><span>Routine capelli</span> · Un alleato pratico dopo la doccia</div>
   <header class="nav">
     <a class="logo" href="https://xboxy.shop" aria-label="XBOXy home">X<span>BOX</span>y</a>
-    <div class="nav-note">Spedizione gratuita da €29,00</div>
+    <div class="nav-note">Spedizione gratuita da €29,99</div>
     <a class="button" href="https://xboxy.shop">Acquista ora <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </header>
 
@@ -242,7 +257,36 @@
     </div>
   </main>
 
-  <footer><div class="wrap footer-inner"><a class="logo" href="https://xboxy.shop">X<span>BOX</span>y</a><span>Scopri il mondo XBOXy.</span><a href="https://xboxy.shop">xboxy.shop</a></div><div class="accepted-payments" style="width:100%;display:flex;justify-content:center;align-items:center;padding:16px 12px 0;box-sizing:border-box;">
+  
+<section class="trust-section" aria-label="Spedizione, assistenza e pagamenti">
+  <div class="wrap">
+    <div class="trust-grid">
+      <article class="trust-card">
+        <div class="trust-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 16.5 9 14l7.5-8.2a2.3 2.3 0 0 1 3.3 3.2L12 17l-2.3 6-3-6-4.2-.5Z"/><path d="m6.7 12.7-3.9-3.9 4.1-1.1 4.2 2.1"/></svg>
+        </div>
+        <h3>Spedizione 24/72 ore</h3>
+        <p>Spedizione gratuita in Italia per ordini da <strong>€29,99</strong>.</p>
+      </article>
+      <article class="trust-card">
+        <div class="trust-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="12" width="4" height="7" rx="2"/><rect x="17" y="12" width="4" height="7" rx="2"/><path d="M21 18c0 2-2 3-5 3h-2"/></svg>
+        </div>
+        <h3>Assistenza</h3>
+        <p>Hai una domanda su un prodotto o un ordine? Siamo qui per aiutarti con le informazioni di cui hai bisogno.</p>
+      </article>
+      <article class="trust-card">
+        <div class="trust-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="10" width="17" height="11" rx="2.5"/><path d="M7.5 10V7a4.5 4.5 0 0 1 9 0v3"/><circle cx="12" cy="15.5" r="1.2"/></svg>
+        </div>
+        <h3>Pagamenti sicuri</h3>
+        <p>Il checkout SumUp gestisce il pagamento online. SumUp Limited è regolamentata dalla Central Bank of Ireland per i servizi finanziari regolamentati. <a href="https://www.sumup.com/it-it/" target="_blank" rel="noopener noreferrer">Scopri SumUp</a>.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap footer-inner"><a class="logo" href="https://xboxy.shop">X<span>BOX</span>y</a><span>Scopri il mondo XBOXy.</span><a href="https://xboxy.shop">xboxy.shop</a></div><div class="accepted-payments" style="width:100%;display:flex;justify-content:center;align-items:center;padding:16px 12px 0;box-sizing:border-box;">
       <img src="https://xboxy.shop/loghi-carte-di_credito.png?v=20261016" alt="Metodi di pagamento accettati" width="264" height="28" loading="lazy" decoding="async" style="display:block;width:100%;max-width:264px;height:auto;object-fit:contain;">
     </div>
     <div class="legal-footer"><p><strong>QUINTA DIMENSIONE srls</strong> · P. IVA 05282450260</p><nav aria-label="Informazioni legali"><a href="https://xboxy.shop/privacy-policy.html">Privacy Policy</a><a href="https://xboxy.shop/cookie-policy.html">Cookie Policy</a><a class="cookie-manage-link" href="#gestisci-cookie">Gestisci cookie</a></nav></div>
