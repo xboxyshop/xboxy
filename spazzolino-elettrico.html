@@ -40,6 +40,9 @@
     h1 em{font-style:normal;position:relative;z-index:0;white-space:normal}
     h1 em:after{content:"";position:absolute;left:-2px;right:-3px;bottom:3px;height:.27em;background:var(--lime);z-index:-1;transform:rotate(-1.3deg)}
     .lead{max-width:540px;color:#424242;font-size:clamp(1.02rem,1.5vw,1.17rem);line-height:1.72;margin:0 0 24px}
+    .product-price{display:flex;align-items:baseline;gap:12px;margin:0 0 24px;flex-wrap:wrap}
+    .product-price .price-label{font-size:.8rem;font-weight:850;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
+    .product-price strong{font-size:clamp(2rem,4vw,2.55rem);font-weight:1000;letter-spacing:-.065em;line-height:1}
     .hero-actions{display:flex;gap:15px;align-items:center;flex-wrap:wrap}
     .microcopy{font-size:.8rem;color:var(--muted);margin-top:18px}
     .visual{position:relative;min-height:490px;display:grid;place-items:center}
@@ -138,6 +141,7 @@
 <!-- PERSONALIZZARE CON IL NOME O IL BENEFICIO PRINCIPALE REALE -->
 <h1>La tua igiene orale.<br/><em>Più smart.</em></h1>
 <p class="lead">Scopri lo <strong>spazzolino elettrico a vibrazione rosa</strong>: 5 modalità, ricarica USB e timer automatico da 2 minuti con intervalli di 30 secondi. Un design compatto con setole ondulate, pensato per accompagnare la tua routine quotidiana.</p>
+<div class="product-price" aria-label="Prezzo del prodotto"><span class="price-label">Prezzo</span><strong>€19,99</strong></div>
 <div class="hero-actions">
 <a class="button" href="https://xboxy.shop">Acquista ora <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 <a class="button secondary" href="#caratteristiche">Scopri il prodotto</a>
