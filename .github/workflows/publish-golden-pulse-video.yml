@@ -1,0 +1,32 @@
+name: Publish Golden Pulse video
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish-video:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Rebuild and verify MP4
+        shell: bash
+        run: |
+          cat video_parts/part1.txt video_parts/part2.txt video_parts/part3.txt video_parts/part4.txt | tr -d '\r\n\t ' | base64 --decode > massaggiatore-viso.mp4
+          actual="$(git hash-object massaggiatore-viso.mp4)"
+          expected="6cb9afda61e090e578828dfda3299d42042dc123"
+          echo "Video git blob SHA: $actual"
+          test "$actual" = "$expected"
+          test "$(wc -c < massaggiatore-viso.mp4)" -gt 1000
+      - name: Commit video and clean temporary chunks
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -rf video_parts
+          git add -A massaggiatore-viso.mp4 video_parts
+          git commit -m "Add verified Golden Pulse facial massager video"
+          git push
