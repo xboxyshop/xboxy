@@ -1,4 +1,4 @@
-name: Publish Golden Pulse video
+name: Verify Golden Pulse video and refresh poster
 on:
   push:
     branches: [main]
@@ -6,29 +6,39 @@ on:
 permissions:
   contents: write
 jobs:
-  publish-video:
+  verify-video-and-poster:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Rebuild and verify MP4
+      - name: Validate the actual MP4 in the repository
         shell: bash
         run: |
-          cat video_parts/part1.txt video_parts/part2.txt video_parts/part3.txt video_parts/part4.txt | tr -d '\r\n\t ' | base64 --decode > massaggiatore-viso.mp4
-          actual="$(git hash-object massaggiatore-viso.mp4)"
-          echo "Reconstructed video git blob SHA: $actual"
-          test "$(wc -c < massaggiatore-viso.mp4)" -gt 1000
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq ffmpeg
+          set -euo pipefail
+          test -s massaggiatore-viso.mp4
           ffprobe -v error -select_streams v:0 -show_entries stream=codec_name,width,height -show_entries format=duration -of default=noprint_wrappers=1 massaggiatore-viso.mp4
-          ffmpeg -v error -i massaggiatore-viso.mp4 -f null -
-      - name: Commit video and clean temporary chunks
+          ffmpeg -hide_banner -v error -i massaggiatore-viso.mp4 -f null -
+      - name: Generate a sharp poster from the actual video
         shell: bash
         run: |
+          set -euo pipefail
+          ffmpeg -hide_banner -loglevel error -ss 3 -i massaggiatore-viso.mp4 -frames:v 1 -vf "scale=360:640:flags=lanczos" -q:v 2 -y massaggiatore-viso-golden-pulse-poster.jpg
+          test -s massaggiatore-viso-golden-pulse-poster.jpg
+          identify massaggiatore-viso-golden-pulse-poster.jpg
+          test "$(identify -format '%wx%h' massaggiatore-viso-golden-pulse-poster.jpg)" = "360x640"
+      - name: Remove failed temporary reconstruction chunks
+        shell: bash
+        run: |
+          rm -rf video_parts video_chunks video_parts_verified video_parts_correct
+      - name: Commit verified media updates
+        shell: bash
+        run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          rm -rf video_parts
-          git add -A massaggiatore-viso.mp4 video_parts
-          git commit -m "Add verified Golden Pulse facial massager video"
-          git push
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Verify Golden Pulse video and refresh sharp poster"
+            git push
+          fi
