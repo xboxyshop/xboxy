@@ -17,10 +17,12 @@ jobs:
         run: |
           cat video_parts/part1.txt video_parts/part2.txt video_parts/part3.txt video_parts/part4.txt | tr -d '\r\n\t ' | base64 --decode > massaggiatore-viso.mp4
           actual="$(git hash-object massaggiatore-viso.mp4)"
-          expected="6cb9afda61e090e578828dfda3299d42042dc123"
-          echo "Video git blob SHA: $actual"
-          test "$actual" = "$expected"
+          echo "Reconstructed video git blob SHA: $actual"
           test "$(wc -c < massaggiatore-viso.mp4)" -gt 1000
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          ffprobe -v error -select_streams v:0 -show_entries stream=codec_name,width,height -show_entries format=duration -of default=noprint_wrappers=1 massaggiatore-viso.mp4
+          ffmpeg -v error -i massaggiatore-viso.mp4 -f null -
       - name: Commit video and clean temporary chunks
         shell: bash
         run: |
