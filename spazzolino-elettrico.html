@@ -150,6 +150,13 @@
 .gift-value small{display:block;color:var(--muted);font-size:.82rem;line-height:1.45;margin-top:3px}
 .gift-dimensions{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;font-size:.9rem;color:#3f3b48;margin:0 0 20px}
 .gift-dimensions strong{color:var(--ink)}
+.gift-countdown{background:var(--ink);color:#fff;border-radius:20px;padding:17px 18px;margin:18px 0 20px}
+.gift-countdown-label{font-size:.76rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:var(--lime);margin-bottom:10px}
+.gift-countdown-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.gift-time-unit{background:#252525;border:1px solid #454545;border-radius:12px;text-align:center;padding:10px 5px 8px;min-width:0}
+.gift-time-unit strong{display:block;font-size:clamp(1.5rem,3vw,2.15rem);font-variant-numeric:tabular-nums;line-height:1.1;letter-spacing:-.04em}
+.gift-time-unit span{display:block;margin-top:4px;color:#d3d3d3;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em}
+.gift-countdown-note{font-size:.75rem;line-height:1.5;color:#d3d3d3;margin:11px 0 0}
 .gift-actions{display:flex;flex-direction:column;align-items:flex-start;gap:9px}
 .gift-actions .button{max-width:100%}
 .gift-reassurance{font-size:.78rem;color:#57515f;line-height:1.5;margin:0}
@@ -268,8 +275,17 @@
       </div>
     </div>
     <p class="gift-dimensions"><strong>La custodia comprende:</strong> scomparto per lo spazzolino, tasca interna in rete e chiusura con cerniera.</p>
+    <div class="gift-countdown" role="timer" aria-label="Conto alla rovescia fino a mezzanotte">
+      <div class="gift-countdown-label">Tempo rimasto nella giornata</div>
+      <div class="gift-countdown-values">
+        <div class="gift-time-unit"><strong id="gift-hours">00</strong><span>ore</span></div>
+        <div class="gift-time-unit"><strong id="gift-minutes">00</strong><span>min</span></div>
+        <div class="gift-time-unit"><strong id="gift-seconds">00</strong><span>sec</span></div>
+      </div>
+      <p class="gift-countdown-note">Il timer indica il tempo che resta alla fine della giornata. Approfitta dell’offerta: spazzolino elettrico rosa e custodia da viaggio in omaggio a <strong>€29,99, spedizione inclusa</strong>.</p>
+    </div>
     <div class="gift-actions">
-      <a class="button" href="#top">Vai allo spazzolino <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="button" href="#top">Approfitta dell’offerta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <div class="shipping-promise shipping-promise--gift"><span class="shipping-promise__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6.5h12v11H3z"/><path d="M15 10h3.5l3 3v4H15z"/><circle cx="7.5" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></span><span class="shipping-promise__text"><strong>Spedizione inclusa nel prezzo di €29,99</strong></span></div>
       <p class="gift-reassurance">L’offerta comprende lo spazzolino elettrico rosa e la custodia da viaggio in omaggio. La custodia va scelta in base alle misure del dispositivo e degli accessori.</p>
     </div>
@@ -351,6 +367,26 @@
 <label class="cookie-choice"><input id="xboxy-cookie-marketing" type="checkbox"/><span><strong>Marketing e profilazione</strong><small>Consenti eventuali strumenti pubblicitari solo se integrati in futuro.</small></span></label>
 <button class="cookie-save" data-cookie-action="save" type="button">Salva le mie preferenze</button></div>
 </div>
+<script>
+(function(){
+  "use strict";
+  var hours=document.getElementById("gift-hours");
+  var minutes=document.getElementById("gift-minutes");
+  var seconds=document.getElementById("gift-seconds");
+  if(!hours||!minutes||!seconds)return;
+  function updateGiftCountdown(){
+    var now=new Date();
+    var midnight=new Date(now.getFullYear(),now.getMonth(),now.getDate()+1,0,0,0,0);
+    var remaining=Math.max(0,midnight.getTime()-now.getTime());
+    var total=Math.floor(remaining/1000);
+    hours.textContent=String(Math.floor(total/3600)).padStart(2,"0");
+    minutes.textContent=String(Math.floor((total%3600)/60)).padStart(2,"0");
+    seconds.textContent=String(total%60).padStart(2,"0");
+  }
+  updateGiftCountdown();
+  window.setInterval(updateGiftCountdown,1000);
+})();
+</script>
 <script>(function(){"use strict";var N="xboxy_consent_v1",AGE=15552000,b,s,st,ma;function host(){var h=location.hostname;return h==="xboxy.shop"||h.endsWith(".xboxy.shop")}function read(){var m=document.cookie.match(new RegExp("(?:^|; )"+N+"=([^;]*)")),v=null;if(!m)return null;try{v=JSON.parse(decodeURIComponent(m[1]))}catch(e){return null}return v&&v.version===1&&typeof v.necessary==="boolean"?v:null}function store(v){v.version=1;v.updatedAt=new Date().toISOString();var c=N+"="+encodeURIComponent(JSON.stringify(v))+"; Path=/; Max-Age="+AGE+"; SameSite=Lax";if(location.protocol==="https:")c+="; Secure";if(host())c+="; Domain=.xboxy.shop";document.cookie=c}function close(){b.classList.remove("is-visible")}function show(o){b.classList.add("is-visible");if(o){s.classList.add("is-open");s.setAttribute("aria-hidden","false")}}function sync(v){st.checked=!!(v&&v.statistics);ma.checked=!!(v&&v.marketing)}function init(){b=document.getElementById("xboxy-cookie-banner");if(!b)return;s=document.getElementById("xboxy-cookie-settings");st=document.getElementById("xboxy-cookie-statistics");ma=document.getElementById("xboxy-cookie-marketing");var v=read();sync(v);if(!v)show(false);document.querySelectorAll("[data-cookie-action]").forEach(function(x){x.addEventListener("click",function(){var a=x.getAttribute("data-cookie-action");if(a==="accept"){store({necessary:true,statistics:true,marketing:true});close()}if(a==="reject"){store({necessary:true,statistics:false,marketing:false});close()}if(a==="customize"){var o=!s.classList.contains("is-open");s.classList.toggle("is-open",o);s.setAttribute("aria-hidden",o?"false":"true");if(o)sync(read())}if(a==="save"){store({necessary:true,statistics:!!st.checked,marketing:!!ma.checked});close()}})});document.querySelectorAll(".cookie-manage-link").forEach(function(x){x.addEventListener("click",function(e){e.preventDefault();sync(read());show(true)})})}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init()})();</script>
 </body>
 </html>
