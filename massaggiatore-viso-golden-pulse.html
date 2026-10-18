@@ -157,10 +157,10 @@
     .gift-reassurance{font-size:.78rem;color:#57515f;line-height:1.5;margin:0}
     .gift-photo-wrap{position:relative;display:grid;place-items:center;min-height:450px;padding:20px}
     .gift-photo-blob{position:absolute;inset:9% 0 8%;background:var(--lime);border:1.5px solid var(--ink);border-radius:48% 52% 42% 58% / 53% 40% 60% 47%;transform:rotate(-6deg)}
-    .gift-video{position:relative;z-index:1;display:block;width:min(100%,270px);height:auto;aspect-ratio:9/16;max-height:430px;object-fit:cover;background:#111;border:1.5px solid var(--ink);border-radius:25px;box-shadow:7px 7px 0 var(--ink)}
+    .gift-video{position:relative;z-index:1;display:block;width:min(100%,270px);height:auto;aspect-ratio:9/16;max-height:none;object-fit:contain;background:#111;border:1.5px solid var(--ink);border-radius:25px;box-shadow:7px 7px 0 var(--ink)}
     .gift-photo-label{position:absolute;z-index:2;left:0;bottom:10px;max-width:88%;padding:11px 14px;background:#ffb8d4;border:1.5px solid var(--ink);font-size:.78rem;font-weight:950;line-height:1.2;text-transform:uppercase;transform:rotate(-4deg);box-shadow:3px 3px 0 var(--ink)}
-    @media(max-width:850px){.gift-card{grid-template-columns:1fr;gap:18px}.gift-photo-wrap{grid-row:1;min-height:400px;padding:16px}.gift-video{width:min(82%,300px);max-height:370px}.gift-copy h2{font-size:clamp(2rem,9vw,3rem)}}
-    @media(max-width:520px){.gift-offer{padding:55px 0 68px}.gift-card{padding:20px 16px;border-radius:25px;box-shadow:5px 5px 0 var(--ink);gap:14px}.gift-photo-wrap{min-height:360px}.gift-video{width:min(82%,270px);max-height:340px;border-radius:20px;box-shadow:4px 4px 0 var(--ink)}.gift-photo-label{left:0;bottom:0;font-size:.68rem;padding:9px 11px}.gift-countdown{padding:14px 12px}.gift-time-unit{padding:9px 3px 7px}.gift-time-unit strong{font-size:1.55rem}.gift-copy>p{font-size:.94rem}.gift-actions .button{width:100%;justify-content:center}}
+    @media(max-width:850px){.gift-card{grid-template-columns:1fr;gap:18px}.gift-photo-wrap{grid-row:1;min-height:480px;padding:16px}.gift-video{width:min(82%,300px);height:auto;max-height:none;aspect-ratio:9/16;object-fit:contain}.gift-copy h2{font-size:clamp(2rem,9vw,3rem)}}
+    @media(max-width:520px){.gift-offer{padding:55px 0 68px}.gift-card{padding:20px 16px;border-radius:25px;box-shadow:5px 5px 0 var(--ink);gap:14px}.gift-photo-wrap{min-height:400px}.gift-video{width:min(82%,270px);height:auto;max-height:none;aspect-ratio:9/16;object-fit:contain;border-radius:20px;box-shadow:4px 4px 0 var(--ink)}.gift-photo-label{left:0;bottom:0;font-size:.68rem;padding:9px 11px}.gift-countdown{padding:14px 12px}.gift-time-unit{padding:9px 3px 7px}.gift-time-unit strong{font-size:1.55rem}.gift-copy>p{font-size:.94rem}.gift-actions .button{width:100%;justify-content:center}}
 
 
     /* Spedizione gratuita: camion e sottolineatura marcata coordinata alla palette */
@@ -298,7 +298,7 @@
             </div>
             <div class="gift-photo-wrap">
               <div class="gift-photo-blob" aria-hidden="true"></div>
-              <video class="gift-video" controls playsinline preload="metadata" poster="https://m.media-amazon.com/images/I/41-1h58UU9L._AC_SL1020_.jpg" aria-label="Video del beauty case da viaggio in omaggio con il massaggiatore viso"><source src="https://cdn.jsdelivr.net/gh/xboxyshop/xboxy@main/massaggiatore-viso-beauty-case-in-omaggio.mp4" type="video/mp4">Il tuo browser non supporta la riproduzione video HTML5.</video>
+              <video class="gift-video" controls playsinline preload="metadata" poster="https://cdn.jsdelivr.net/gh/xboxyshop/xboxy@main/massaggiatore-viso-beauty-case-poster.jpg?v=20261018-1" aria-label="Video del beauty case da viaggio in omaggio con il massaggiatore viso"><source src="https://cdn.jsdelivr.net/gh/xboxyshop/xboxy@main/massaggiatore-viso-beauty-case-in-omaggio.mp4" type="video/mp4">Il tuo browser non supporta la riproduzione video HTML5.</video>
               <div class="gift-photo-label">Il tuo extra beauty</div>
             </div>
           </div>
