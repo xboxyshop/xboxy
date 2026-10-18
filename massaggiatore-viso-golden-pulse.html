@@ -132,6 +132,36 @@
 .trust-card a{font-weight:800;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:760px){.trust-section{padding:34px 0 42px}.trust-section .wrap{width:min(var(--max,1180px),calc(100% - 28px))}.trust-grid{grid-template-columns:1fr;gap:13px}.trust-card{padding:25px 20px;border-radius:22px}.trust-icon{width:60px;height:60px;margin-bottom:15px}.trust-card h3{font-size:1.08rem}.trust-card p{font-size:.9rem}}
 
+
+    /* Omaggio beauty case: sezione promozionale */
+    .gift-offer{padding:76px 0 88px}
+    .gift-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.9fr);gap:clamp(24px,5vw,58px);align-items:center;background:#f2ecff;border:1.5px solid var(--ink);border-radius:32px;padding:clamp(24px,4.5vw,54px);box-shadow:8px 8px 0 var(--ink)}
+    .gift-copy .kicker{display:inline-flex;align-items:center;gap:8px;background:var(--lime);border:1px solid var(--ink);border-radius:999px;padding:8px 12px;font-size:.72rem;font-weight:900;letter-spacing:.055em;text-transform:uppercase;margin-bottom:17px}
+    .gift-copy h2{font-size:clamp(2rem,4.5vw,3.45rem);line-height:.98;letter-spacing:-.06em;margin:0 0 17px}
+    .gift-copy>p{font-size:1.02rem;line-height:1.7;color:#3f3b48;margin:0 0 16px}
+    .gift-value{display:flex;gap:12px;align-items:center;margin:20px 0 18px;padding:14px 16px;background:#fffdf9;border:1px solid var(--line);border-radius:16px}
+    .gift-value .gift-value-mark{display:grid;place-items:center;width:44px;height:44px;flex:0 0 44px;border-radius:14px;background:var(--lime);border:1px solid var(--ink);font-weight:950;font-size:1.3rem}
+    .gift-value strong{display:block;font-size:1rem;line-height:1.3}
+    .gift-value small{display:block;color:var(--muted);font-size:.82rem;line-height:1.45;margin-top:3px}
+    .gift-dimensions{display:inline-flex;gap:8px;align-items:baseline;font-size:.9rem;color:#3f3b48;margin:0 0 20px}
+    .gift-dimensions strong{color:var(--ink)}
+    .gift-countdown{background:var(--ink);color:#fff;border-radius:20px;padding:17px 18px;margin:0 0 20px}
+    .gift-countdown-label{font-size:.76rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:var(--lime);margin-bottom:10px}
+    .gift-countdown-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+    .gift-time-unit{background:#252525;border:1px solid #454545;border-radius:12px;text-align:center;padding:10px 5px 8px}
+    .gift-time-unit strong{display:block;font-size:clamp(1.5rem,3vw,2.15rem);font-variant-numeric:tabular-nums;line-height:1.1;letter-spacing:-.04em}
+    .gift-time-unit span{display:block;margin-top:4px;color:#d3d3d3;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em}
+    .gift-countdown-note{font-size:.72rem;line-height:1.45;color:#d3d3d3;margin:11px 0 0}
+    .gift-actions{display:flex;flex-direction:column;align-items:flex-start;gap:9px}
+    .gift-actions .button{max-width:100%}
+    .gift-reassurance{font-size:.78rem;color:#57515f;line-height:1.5;margin:0}
+    .gift-photo-wrap{position:relative;display:grid;place-items:center;min-height:330px;padding:20px}
+    .gift-photo-blob{position:absolute;inset:9% 0 8%;background:var(--lime);border:1.5px solid var(--ink);border-radius:48% 52% 42% 58% / 53% 40% 60% 47%;transform:rotate(-6deg)}
+    .gift-photo{position:relative;z-index:1;display:block;width:min(100%,390px);max-height:430px;aspect-ratio:1/1;object-fit:contain;background:#fffdf9;border:1.5px solid var(--ink);border-radius:25px;padding:10px;box-shadow:7px 7px 0 var(--ink)}
+    .gift-photo-label{position:absolute;z-index:2;left:0;bottom:10px;max-width:88%;padding:11px 14px;background:#ffb8d4;border:1.5px solid var(--ink);font-size:.78rem;font-weight:950;line-height:1.2;text-transform:uppercase;transform:rotate(-4deg);box-shadow:3px 3px 0 var(--ink)}
+    @media(max-width:850px){.gift-card{grid-template-columns:1fr;gap:18px}.gift-photo-wrap{grid-row:1;min-height:280px;padding:16px}.gift-photo{width:min(82%,350px);max-height:360px}.gift-copy h2{font-size:clamp(2rem,9vw,3rem)}}
+    @media(max-width:520px){.gift-offer{padding:55px 0 68px}.gift-card{padding:20px 16px;border-radius:25px;box-shadow:5px 5px 0 var(--ink);gap:14px}.gift-photo-wrap{min-height:230px}.gift-photo{width:min(82%,290px);border-radius:20px;padding:7px;box-shadow:4px 4px 0 var(--ink)}.gift-photo-label{left:0;bottom:0;font-size:.68rem;padding:9px 11px}.gift-countdown{padding:14px 12px}.gift-time-unit{padding:9px 3px 7px}.gift-time-unit strong{font-size:1.55rem}.gift-copy>p{font-size:.94rem}.gift-actions .button{width:100%;justify-content:center}}
+
 </style>
 </head>
 <body>
@@ -213,6 +243,45 @@
         </div>
       </section>
 
+
+      <section class="gift-offer" id="gift-beautycase" aria-labelledby="gift-beautycase-title">
+        <div class="wrap">
+          <div class="gift-card">
+            <div class="gift-copy">
+              <div class="kicker">Regalo beauty · valore €10,99</div>
+              <h2 id="gift-beautycase-title">Un beauty case da viaggio in omaggio con il tuo massaggiatore.</h2>
+              <p>Acquista il <strong>Beauty Bar 24K Golden Pulse a €14,99</strong> e ricevi in regalo il beauty case trasparente: pratico per tenere in ordine i tuoi essenziali beauty e ritrovarli a colpo d’occhio, a casa o in viaggio.</p>
+              <div class="gift-value">
+                <div class="gift-value-mark" aria-hidden="true">🎁</div>
+                <div>
+                  <strong>Lo aggiungiamo in omaggio al tuo acquisto</strong>
+                  <small>Valore del beauty case: €10,99 · nessun costo aggiuntivo per il regalo.</small>
+                </div>
+              </div>
+              <p class="gift-dimensions"><strong>Misure:</strong> 22 × 12 × 8 cm</p>
+              <div class="gift-countdown" role="timer" aria-label="Countdown giornaliero alla mezzanotte">
+                <div class="gift-countdown-label">Tempo rimasto nella giornata</div>
+                <div class="gift-countdown-values">
+                  <div class="gift-time-unit"><strong id="gift-hours">00</strong><span>ore</span></div>
+                  <div class="gift-time-unit"><strong id="gift-minutes">00</strong><span>min</span></div>
+                  <div class="gift-time-unit"><strong id="gift-seconds">00</strong><span>sec</span></div>
+                </div>
+                <p class="gift-countdown-note">Il timer si rinnova ogni giorno a mezzanotte. L’omaggio è legato alla promozione attiva e può essere modificato quando cambiano le condizioni dell’offerta.</p>
+              </div>
+              <div class="gift-actions">
+                <a class="button" href="#acquista">Approfitta dell’offerta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                <p class="gift-reassurance">Acquistando il massaggiatore, ricevi anche il beauty case in omaggio finché la promozione è attiva.</p>
+              </div>
+            </div>
+            <div class="gift-photo-wrap">
+              <div class="gift-photo-blob" aria-hidden="true"></div>
+              <img class="gift-photo" src="https://m.media-amazon.com/images/I/41-1h58UU9L._AC_SL1020_.jpg" alt="Beauty case trasparente rosa da viaggio con chiusura a zip" width="600" height="600" loading="lazy" decoding="async">
+              <div class="gift-photo-label">Il tuo extra beauty</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="faq">
         <div class="section-head">
           <div class="kicker">FAQ</div>
@@ -276,6 +345,28 @@
   <div class="mobile-buy"><a class="button" href="https://xboxy.shop">Acquista ora · €14,99 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 <div id="xboxy-cookie-banner" class="cookie-banner" role="region" aria-label="Preferenze cookie" aria-live="polite"><h2>La tua privacy, le tue scelte.</h2><p>Usiamo cookie tecnici necessari al funzionamento del sito. Con il tuo permesso, le categorie facoltative potranno essere usate per statistiche e marketing. Al momento non sono collegati strumenti di analisi o pubblicità a queste categorie. Puoi accettare, rifiutare o personalizzare la scelta senza impedire la navigazione. <a href="https://xboxy.shop/privacy-policy.html">Privacy Policy</a> · <a href="https://xboxy.shop/cookie-policy.html">Cookie Policy</a></p><div class="cookie-actions"><button type="button" data-cookie-action="reject">Rifiuta facoltativi</button><button type="button" data-cookie-action="customize" aria-controls="xboxy-cookie-settings">Personalizza</button><button type="button" data-cookie-action="accept">Accetta tutti</button></div><div id="xboxy-cookie-settings" class="cookie-settings" aria-hidden="true"><p>Le categorie facoltative sono disattivate finché non scegli. La scelta non attiva script di analisi o marketing non presenti sul sito.</p><label class="cookie-choice"><input type="checkbox" checked disabled><span><strong>Cookie tecnici necessari</strong><small>Sempre attivi. Servono al funzionamento essenziale e a ricordare le preferenze.</small></span></label><label class="cookie-choice"><input id="xboxy-cookie-statistics" type="checkbox"><span><strong>Statistiche</strong><small>Consenti eventuali strumenti statistici solo se saranno integrati in futuro.</small></span></label><label class="cookie-choice"><input id="xboxy-cookie-marketing" type="checkbox"><span><strong>Marketing e profilazione</strong><small>Consenti eventuali strumenti pubblicitari solo se saranno integrati in futuro.</small></span></label><button class="cookie-save" type="button" data-cookie-action="save">Salva le mie preferenze</button></div></div>
 <script>(function(){"use strict";var N="xboxy_consent_v1",AGE=15552000,b,s,st,ma;function host(){var h=location.hostname;return h==="xboxy.shop"||h.endsWith(".xboxy.shop")}function read(){var m=document.cookie.match(new RegExp("(?:^|; )"+N+"=([^;]*)")),v=null;if(!m)return null;try{v=JSON.parse(decodeURIComponent(m[1]))}catch(e){return null}return v&&v.version===1&&typeof v.necessary==="boolean"?v:null}function store(v){v.version=1;v.updatedAt=new Date().toISOString();var c=N+"="+encodeURIComponent(JSON.stringify(v))+"; Path=/; Max-Age="+AGE+"; SameSite=Lax";if(location.protocol==="https:")c+="; Secure";if(host())c+="; Domain=.xboxy.shop";document.cookie=c}function close(){b.classList.remove("is-visible")}function show(o){b.classList.add("is-visible");if(o){s.classList.add("is-open");s.setAttribute("aria-hidden","false")}}function sync(v){st.checked=!!(v&&v.statistics);ma.checked=!!(v&&v.marketing)}function init(){b=document.getElementById("xboxy-cookie-banner");if(!b)return;s=document.getElementById("xboxy-cookie-settings");st=document.getElementById("xboxy-cookie-statistics");ma=document.getElementById("xboxy-cookie-marketing");var v=read();sync(v);if(!v)show(false);document.querySelectorAll("[data-cookie-action]").forEach(function(x){x.addEventListener("click",function(){var a=x.getAttribute("data-cookie-action");if(a==="accept"){store({necessary:true,statistics:true,marketing:true});close()}if(a==="reject"){store({necessary:true,statistics:false,marketing:false});close()}if(a==="customize"){var o=!s.classList.contains("is-open");s.classList.toggle("is-open",o);s.setAttribute("aria-hidden",o?"false":"true");if(o)sync(read())}if(a==="save"){store({necessary:true,statistics:!!st.checked,marketing:!!ma.checked});close()}})});document.querySelectorAll(".cookie-manage-link").forEach(function(x){x.addEventListener("click",function(e){e.preventDefault();sync(read());show(true)})})}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init()})();</script>
+
+
+<script>
+(function(){
+  "use strict";
+  var hours=document.getElementById("gift-hours");
+  var minutes=document.getElementById("gift-minutes");
+  var seconds=document.getElementById("gift-seconds");
+  if(!hours||!minutes||!seconds)return;
+  function updateGiftCountdown(){
+    var now=new Date();
+    var midnight=new Date(now.getFullYear(),now.getMonth(),now.getDate()+1,0,0,0,0);
+    var remaining=Math.max(0,midnight.getTime()-now.getTime());
+    var total=Math.floor(remaining/1000);
+    hours.textContent=String(Math.floor(total/3600)).padStart(2,"0");
+    minutes.textContent=String(Math.floor((total%3600)/60)).padStart(2,"0");
+    seconds.textContent=String(total%60).padStart(2,"0");
+  }
+  updateGiftCountdown();
+  window.setInterval(updateGiftCountdown,1000);
+})();
+</script>
 
 </body>
 </html>
