@@ -23,6 +23,13 @@ jobs:
           test -s massaggiatore-viso.mp4
           ffprobe -v error -select_streams v:0 -show_entries stream=codec_name,width,height -show_entries format=duration -of default=noprint_wrappers=1 massaggiatore-viso.mp4
           ffmpeg -hide_banner -v error -i massaggiatore-viso.mp4 -f null -
+          test -s massaggiatore-viso-beauty-case-in-omaggio.mp4
+          gift_dims="$(ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 massaggiatore-viso-beauty-case-in-omaggio.mp4)"
+          gift_width="${gift_dims%x*}"
+          gift_height="${gift_dims#*x}"
+          test "$((gift_width * 16))" -eq "$((gift_height * 9))"
+          ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1 massaggiatore-viso-beauty-case-in-omaggio.mp4
+          ffmpeg -hide_banner -v error -i massaggiatore-viso-beauty-case-in-omaggio.mp4 -f null -
       - name: Generate a sharp poster from the actual video
         shell: bash
         run: |
@@ -30,6 +37,14 @@ jobs:
           ffmpeg -hide_banner -loglevel error -ss 3 -i massaggiatore-viso.mp4 -frames:v 1 -vf "scale=360:640:flags=lanczos" -q:v 2 -y massaggiatore-viso-golden-pulse-poster.jpg
           test -s massaggiatore-viso-golden-pulse-poster.jpg
           ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 massaggiatore-viso-golden-pulse-poster.jpg | grep -qx '360x640'
+
+      - name: Generate a vertical poster for the beauty-case gift video
+        shell: bash
+        run: |
+          set -euo pipefail
+          ffmpeg -hide_banner -loglevel error -ss 2 -i massaggiatore-viso-beauty-case-in-omaggio.mp4 -frames:v 1 -vf "scale=360:640:flags=lanczos" -q:v 2 -y massaggiatore-viso-beauty-case-poster.jpg
+          test -s massaggiatore-viso-beauty-case-poster.jpg
+          ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 massaggiatore-viso-beauty-case-poster.jpg | grep -qx '360x640'
       - name: Remove failed temporary reconstruction chunks
         shell: bash
         run: |
@@ -42,6 +57,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "Verify Golden Pulse video and refresh sharp poster"
+            git commit -m "Verify Golden Pulse videos and refresh vertical posters"
             git push
           fi
