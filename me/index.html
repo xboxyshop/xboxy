@@ -173,6 +173,25 @@
 @media(max-width:850px){.gift-card{grid-template-columns:1fr;gap:18px}.gift-photo-wrap{grid-row:1;min-height:500px;padding:16px}.gift-product-image{width:min(90%,330px)}.gift-video{width:min(82%,300px);height:auto;aspect-ratio:9/16;max-height:none;object-fit:contain}.gift-copy h2{font-size:clamp(2rem,9vw,3rem)}}
 @media(max-width:520px){.gift-offer{padding:52px 0 64px}.gift-card{padding:20px 16px;border-radius:25px;box-shadow:5px 5px 0 var(--ink);gap:14px}.gift-photo-wrap{min-height:450px}.gift-product-image{width:min(90%,280px);border-radius:20px;box-shadow:4px 4px 0 var(--ink)}.gift-video{width:min(82%,270px);height:auto;aspect-ratio:9/16;max-height:none;object-fit:contain;border-radius:20px;box-shadow:4px 4px 0 var(--ink)}.gift-photo-label{left:0;bottom:0;font-size:.68rem;padding:9px 11px}.gift-copy>p{font-size:.94rem}.gift-actions .button{width:100%;justify-content:center}}
 
+
+/* Upsell spazzolino rosa: esclusivo per me.xboxy.shop */
+.upsell-rosa{padding:64px 20px;background:var(--cream)}
+.upsell-rosa .upsell-inner{max-width:var(--max);margin:auto;border:1px solid var(--line);border-radius:30px;background:var(--paper);box-shadow:var(--shadow);padding:clamp(22px,4vw,48px)}
+.upsell-rosa .upsell-kicker{display:inline-block;padding:7px 13px;border-radius:30px;background:var(--lime);font-size:.75rem;font-weight:900;letter-spacing:.03em;text-transform:uppercase}
+.upsell-rosa .upsell-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:clamp(24px,5vw,65px);margin-top:22px}
+.upsell-rosa h2{font-size:clamp(2rem,4.5vw,3.7rem);line-height:1.08;letter-spacing:-.055em;margin:0 0 18px}
+.upsell-rosa p{font-size:1.05rem;color:var(--muted);margin:0 0 20px}
+.upsell-rosa .upsell-price{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:14px 0}
+.upsell-rosa .upsell-price del{color:var(--muted);font-size:1.1rem}
+.upsell-rosa .upsell-price strong{font-size:2.25rem;letter-spacing:-.045em}
+.upsell-rosa .upsell-summary{background:var(--cream);padding:18px;border-radius:18px;margin:22px 0}
+.upsell-rosa .upsell-line{display:flex;justify-content:space-between;gap:16px;margin:8px 0}
+.upsell-rosa .upsell-total{border-top:1px solid var(--line);padding-top:12px;margin-top:12px;font-weight:900;font-size:1.25rem}
+.upsell-rosa .upsell-pending{width:100%;padding:16px 18px;border:2px solid var(--ink);border-radius:99px;background:var(--lime);color:var(--ink);font:inherit;font-weight:900;cursor:not-allowed;opacity:.75}
+.upsell-rosa .upsell-note{font-size:.82rem;margin:12px 0 0;color:var(--muted)}
+.upsell-rosa .upsell-media{position:relative;display:flex;justify-content:center}
+.upsell-rosa .upsell-media video{display:block;width:min(100%,320px);aspect-ratio:9/16;object-fit:cover;border-radius:24px;background:#f6dce9;box-shadow:var(--shadow)}
+@media(max-width:760px){.upsell-rosa{padding:38px 16px}.upsell-rosa .upsell-grid{grid-template-columns:1fr}.upsell-rosa .upsell-media{order:-1}.upsell-rosa .upsell-media video{width:min(100%,260px)}}
 </style>
 <meta content="spazzolino elettrico azzurro uomo, spazzolino elettrico a vibrazione, spazzolino ricarica USB, spazzolino 5 modalità, timer 2 minuti" name="keywords"/><meta content="Spazzolino Elettrico Azzurro da Uomo + Custodia in Omaggio | XBOXy" property="og:title"/><meta content="Spazzolino elettrico azzurro con 5 modalità e timer da 2 minuti. Custodia da viaggio in omaggio, €29,99 con spedizione gratuita." property="og:description"/><meta content="https://raw.githubusercontent.com/xboxyshop/xboxy/main/spazzolino-elettrico-uomo-poster.jpg?v=b889bce32f7c24a3960663a69b3059506db3e6f8" property="og:image"/><meta content="product" property="og:type"/><link href="https://xboxy.shop/spazzolino-elettrico-uomo" rel="canonical"/>  <link rel="icon" type="image/png" href="/favicon.png?v=20261018-2" sizes="64x64">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=20261018-2">
@@ -293,6 +312,30 @@
         <!-- Immagine statica temporanea: quando sarà disponibile il video MP4, sostituire questo img con il video promozionale. -->
         <video class="gift-video" controls playsinline preload="metadata" poster="https://cdn.jsdelivr.net/gh/xboxyshop/xboxy@main/spazzolino-uomo-custodia-oaggio-poster.jpg?v=20261018-3" aria-label="Video promozionale dello spazzolino elettrico azzurro con custodia da viaggio in omaggio"><source src="https://cdn.jsdelivr.net/gh/xboxyshop/xboxy@main/spazzolino-uomo-custodia-oaggio-01.mp4?v=20261018-3" type="video/mp4"/>Il tuo browser non supporta la riproduzione video HTML5.</video>
         <div class="gift-photo-label">Custodia da viaggio in omaggio</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="upsell-rosa" id="upsell-rosa" aria-labelledby="upsell-rosa-title">
+  <div class="upsell-inner">
+    <span class="upsell-kicker">Offerta abbinata · Secondo spazzolino al 50%</span>
+    <div class="upsell-grid">
+      <div class="upsell-copy">
+        <h2 id="upsell-rosa-title">Ti piace lo spazzolino azzurro? Scopri anche quello rosa.</h2>
+        <p>Acquista lo spazzolino elettrico azzurro con custodia da viaggio in omaggio e aggiungi lo <strong>spazzolino elettrico rosa a €14,99</strong>, con uno sconto di €15 rispetto al prezzo di riferimento di €29,99.</p>
+        <div class="upsell-price"><del>€29,99</del><strong>€14,99</strong><span>per lo spazzolino rosa</span></div>
+        <div class="upsell-summary" aria-label="Riepilogo offerta combinata">
+          <div class="upsell-line"><span>Spazzolino azzurro + custodia omaggio</span><strong>€29,99</strong></div>
+          <div class="upsell-line"><span>Spazzolino rosa scontato</span><strong>€14,99</strong></div>
+          <div class="upsell-line upsell-total"><span>Totale dei due spazzolini + custodia</span><strong>€44,98</strong></div>
+        </div>
+        <button class="upsell-pending" type="button" disabled aria-label="Offerta combinata da €44,98 in attesa del link di pagamento SumUp">Acquista entrambi a €44,98 · In attivazione</button>
+        <p class="upsell-note">Il pagamento unico dell'offerta combinata sarà disponibile dopo l'attivazione del relativo link SumUp. Nel frattempo puoi acquistare lo spazzolino azzurro a €29,99 tramite i pulsanti di acquisto già attivi.</p>
+      </div>
+      <div class="upsell-media">
+        <video controls playsinline preload="metadata" aria-label="Video dello spazzolino elettrico rosa"><source src="https://xboxy.shop/spazzolino-elettrico-rosa-01.mp4" type="video/mp4"/>Il tuo browser non supporta i video HTML5.</video>
       </div>
     </div>
   </div>
