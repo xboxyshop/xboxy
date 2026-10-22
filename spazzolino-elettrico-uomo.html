@@ -173,6 +173,18 @@
 @media(max-width:850px){.gift-card{grid-template-columns:1fr;gap:18px}.gift-photo-wrap{grid-row:1;min-height:500px;padding:16px}.gift-product-image{width:min(90%,330px)}.gift-video{width:min(82%,300px);height:auto;aspect-ratio:9/16;max-height:none;object-fit:contain}.gift-copy h2{font-size:clamp(2rem,9vw,3rem)}}
 @media(max-width:520px){.gift-offer{padding:52px 0 64px}.gift-card{padding:20px 16px;border-radius:25px;box-shadow:5px 5px 0 var(--ink);gap:14px}.gift-photo-wrap{min-height:450px}.gift-product-image{width:min(90%,280px);border-radius:20px;box-shadow:4px 4px 0 var(--ink)}.gift-video{width:min(82%,270px);height:auto;aspect-ratio:9/16;max-height:none;object-fit:contain;border-radius:20px;box-shadow:4px 4px 0 var(--ink)}.gift-photo-label{left:0;bottom:0;font-size:.68rem;padding:9px 11px}.gift-copy>p{font-size:.94rem}.gift-actions .button{width:100%;justify-content:center}}
 
+
+    /* Pulsante e banner pagamenti nello stesso blocco: visibili su desktop e mobile */
+    .payment-cta{display:flex;flex-direction:column;align-items:center;gap:7px;width:fit-content;max-width:100%;min-width:0;flex:0 1 auto}
+    .payment-cta .payment-logos-near-cta{display:block;width:min(100%,264px);max-width:264px;height:auto;max-height:none;object-fit:contain;margin:0;clear:none;flex:0 0 auto}
+    .hero-actions .payment-cta{align-self:flex-start}
+    .nav .payment-cta{align-self:center}
+    .cta-panel .payment-cta{margin:0 auto;align-items:center}
+    .upsell-rosa .payment-cta{width:100%;align-items:center}
+    .mobile-buy .payment-cta{width:100%;align-items:center;gap:4px}
+    .mobile-buy .payment-cta .button,.mobile-buy .payment-cta .upsell-pending{width:100%;max-width:none}
+    .mobile-buy .payment-cta .payment-logos-near-cta{width:min(70vw,264px)}
+    @media(max-width:760px){.hero-actions .payment-cta{align-self:stretch;width:100%;align-items:center}.payment-cta .payment-logos-near-cta{width:min(100%,264px)}}
 </style>
 <meta content="spazzolino elettrico azzurro uomo, spazzolino elettrico a vibrazione, spazzolino ricarica USB, spazzolino 5 modalità, timer 2 minuti" name="keywords"/><meta content="Spazzolino Elettrico Azzurro da Uomo + Custodia in Omaggio | XBOXy" property="og:title"/><meta content="Spazzolino elettrico azzurro con 5 modalità e timer da 2 minuti. Custodia da viaggio in omaggio, €29,99 con spedizione gratuita." property="og:description"/><meta content="https://raw.githubusercontent.com/xboxyshop/xboxy/main/spazzolino-elettrico-uomo-poster.jpg?v=b889bce32f7c24a3960663a69b3059506db3e6f8" property="og:image"/><meta content="product" property="og:type"/><link href="https://xboxy.shop/spazzolino-elettrico-uomo" rel="canonical"/>  <link rel="icon" type="image/png" href="/favicon.png?v=20261018-2" sizes="64x64">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=20261018-2">
@@ -182,7 +194,7 @@
 <header class="nav">
 <a aria-label="XBOXy home" class="logo" href="https://xboxy.shop">X<span>BOX</span>y</a>
 <div class="nav-note">Spedizione gratuita inclusa</div>
-<a class="button" href="#offerta-custodia">Acquista ora <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<div class="payment-cta"><a class="button" href="https://pay.sumup.com/b2c/QLSJ4K3L">Acquista ora <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><img class="payment-logos-near-cta" src="https://xboxy.shop/loghi-carte-di_credito.png?v=20261022-fix1" alt="Carte e metodi di pagamento accettati" width="264" height="28" loading="eager" decoding="async"/></div>
 </header>
 <main>
 <div class="wrap">
@@ -197,7 +209,7 @@
 <span class="label">Prezzo finale</span>
 </div>
 <div class="hero-actions">
-<a class="button" href="#offerta-custodia">Acquista ora <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<div class="payment-cta"><a class="button" href="https://pay.sumup.com/b2c/QLSJ4K3L">Acquista ora <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><img class="payment-logos-near-cta" src="https://xboxy.shop/loghi-carte-di_credito.png?v=20261022-fix1" alt="Carte e metodi di pagamento accettati" width="264" height="28" loading="eager" decoding="async"/></div>
 <a class="button secondary" href="#caratteristiche">Scopri il prodotto</a>
 </div>
 <p class="microcopy">Consulta le caratteristiche e le specifiche riportate nella pagina prima di scegliere.</p>
@@ -239,7 +251,7 @@
 <li><span class="check">2</span><span> — Avvia il dispositivo e seleziona una delle cinque modalità di vibrazione.</span></li>
 <li><span class="check">3</span><span> — La funzione automatica scandisce 2 minuti con intervalli di 30 secondi. Pulisci il dispositivo secondo le istruzioni del produttore.</span></li>
 </ul>
-<a class="button" href="#offerta-custodia">Acquista ora <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<div class="payment-cta"><a class="button" href="https://pay.sumup.com/b2c/QLSJ4K3L">Acquista ora <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><img class="payment-logos-near-cta" src="https://xboxy.shop/loghi-carte-di_credito.png?v=20261022-fix1" alt="Carte e metodi di pagamento accettati" width="264" height="28" loading="eager" decoding="async"/></div>
 </div>
 </div>
 </section>
@@ -283,7 +295,7 @@
           <p class="gift-countdown-note">Il timer mostra il tempo che resta alla fine della giornata. Approfitta dell'offerta: spazzolino elettrico azzurro e custodia da viaggio in omaggio a <strong>€29,99, con spedizione gratuita</strong>.</p>
         </div>
         <div class="gift-actions">
-          <a class="button" href="#acquista">Approfitta dell’offerta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <div class="payment-cta"><a class="button" href="https://pay.sumup.com/b2c/QLSJ4K3L">Approfitta dell’offerta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><img class="payment-logos-near-cta" src="https://xboxy.shop/loghi-carte-di_credito.png?v=20261022-fix1" alt="Carte e metodi di pagamento accettati" width="264" height="28" loading="eager" decoding="async"/></div>
           <p class="gift-shipping">✓ Spedizione gratuita inclusa nel prezzo di €29,99</p>
           <p class="gift-reassurance">L’offerta comprende uno spazzolino elettrico azzurro da uomo e una custodia da viaggio blu in omaggio. Verifica la compatibilità della custodia con il dispositivo che utilizzi.</p>
         </div>
@@ -317,7 +329,7 @@
 <h2>Il tuo spazzolino azzurro, con una custodia in più.</h2>
 <p>Spazzolino elettrico azzurro da uomo e custodia da viaggio in omaggio a €29,99, con spedizione gratuita.</p>
 <div class="cta-price" aria-label="Prezzo del prodotto">€29,99</div>
-<a class="button" href="#offerta-custodia">Acquista ora <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<div class="payment-cta"><a class="button" href="https://pay.sumup.com/b2c/QLSJ4K3L">Acquista ora <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><img class="payment-logos-near-cta" src="https://xboxy.shop/loghi-carte-di_credito.png?v=20261022-fix1" alt="Carte e metodi di pagamento accettati" width="264" height="28" loading="eager" decoding="async"/></div>
 </div>
 </section>
 </div>
@@ -352,12 +364,12 @@
 </section>
 
 <footer><div class="wrap footer-inner"><a class="logo" href="https://xboxy.shop">X<span>BOX</span>y</a><span>Scopri il mondo XBOXy.</span><a href="https://xboxy.shop">xboxy.shop</a></div><div class="accepted-payments" style="width:100%;display:flex;justify-content:center;align-items:center;padding:16px 12px 0;box-sizing:border-box;">
-      <img src="https://xboxy.shop/loghi-carte-di_credito.png?v=20261016" alt="Metodi di pagamento accettati" width="264" height="28" loading="lazy" decoding="async" style="display:block;width:100%;max-width:264px;height:auto;object-fit:contain;">
+      <img src="https://xboxy.shop/loghi-carte-di_credito.png?v=20261022-fix1" alt="Metodi di pagamento accettati" width="264" height="28" loading="lazy" decoding="async" style="display:block;width:100%;max-width:264px;height:auto;object-fit:contain;">
     </div>
     <div class="legal-footer"><p><strong>QUINTA DIMENSIONE srls</strong> · P. IVA 05282450260</p><nav aria-label="Informazioni legali"><a href="https://xboxy.shop/privacy-policy.html">Privacy Policy</a><a href="https://xboxy.shop/cookie-policy.html">Cookie Policy</a><a class="cookie-manage-link" href="#gestisci-cookie">Gestisci cookie</a></nav></div>
 </footer>
 <div class="footer-pad"></div>
-<div class="mobile-buy"><a class="button" href="#offerta-custodia">Acquista ora · €29,99 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+<div class="mobile-buy"><div class="payment-cta"><a class="button" href="https://pay.sumup.com/b2c/QLSJ4K3L">Acquista ora · €29,99 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><img class="payment-logos-near-cta" src="https://xboxy.shop/loghi-carte-di_credito.png?v=20261022-fix1" alt="Carte e metodi di pagamento accettati" width="264" height="28" loading="eager" decoding="async"/></div></div>
 <div aria-label="Preferenze cookie" aria-live="polite" class="cookie-banner" id="xboxy-cookie-banner" role="region">
 <h2>La tua privacy, le tue scelte.</h2>
 <p>Usiamo cookie tecnici necessari al funzionamento del sito. Le categorie facoltative possono essere scelte separatamente; attualmente non sono collegati strumenti di analisi o pubblicità. Puoi accettare, rifiutare o personalizzare la scelta senza impedire la navigazione. <a href="https://xboxy.shop/privacy-policy.html">Privacy Policy</a> · <a href="https://xboxy.shop/cookie-policy.html">Cookie Policy</a></p>
