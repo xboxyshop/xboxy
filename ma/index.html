@@ -196,7 +196,7 @@
     .upsell-massaggiatori .upsell-line{display:flex;justify-content:space-between;gap:16px;margin:9px 0;font-size:.94rem}
     .upsell-massaggiatori .upsell-line strong{white-space:nowrap}
     .upsell-massaggiatori .upsell-total{border-top:1px solid var(--line);padding-top:12px;margin-top:12px;font-weight:900;font-size:1.16rem}
-    .upsell-massaggiatori .upsell-pending{width:100%;padding:16px 18px;border:2px solid var(--ink);border-radius:99px;background:#e5e0d8;color:#6d6a65;font:inherit;font-weight:900;display:block;text-align:center;cursor:not-allowed;opacity:1}
+    .upsell-massaggiatori .upsell-checkout-button{width:100%;padding:16px 18px;border:2px solid var(--ink);border-radius:999px;background:var(--lime,#d9ff32);color:var(--ink,#111);font:inherit;font-weight:950;display:flex;align-items:center;justify-content:center;gap:10px;text-align:center;text-decoration:none;cursor:pointer;position:relative;z-index:3;pointer-events:auto;box-shadow:5px 5px 0 var(--ink,#111);transition:transform .15s ease,box-shadow .15s ease}.upsell-massaggiatori .upsell-checkout-button:hover{transform:translateY(-2px);box-shadow:7px 7px 0 var(--ink,#111)}.upsell-massaggiatori .upsell-checkout-button:focus-visible{outline:3px solid #7352be;outline-offset:4px}
     .upsell-massaggiatori .upsell-note{font-size:.82rem;line-height:1.55;margin:12px 0 0;color:var(--muted)}
     .upsell-massaggiatori .upsell-media{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:14px}
     .upsell-massaggiatori .upsell-product{position:relative;text-align:center;min-width:0}
@@ -346,8 +346,9 @@
                 <div class="upsell-line upsell-total"><span>Totale per 2 massaggiatori + 2 beauty case</span><strong>€29,99</strong></div>
               </div>
               <p><strong>Spedizione gratuita inclusa.</strong> L'offerta singola da €19,99 con un beauty case in omaggio resta disponibile nella stessa pagina.</p>
-              <button class="upsell-pending" type="button" disabled aria-disabled="true">Pagamento unico SumUp da attivare</button>
-              <p class="upsell-note">Il pulsante verrà attivato con il link SumUp dedicato all'offerta doppia. Non usare il link della singola unità per pagare questo riepilogo.</p>
+              <a class="upsell-checkout-button" href="https://pay.sumup.com/b2c/Q51S2SKL" target="_self" aria-label="Acquista 2 massaggiatori viso e 2 beauty case in omaggio a €29,99">Acquista entrambi · €29,99 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <img class="payment-logos-near-cta" src="https://raw.githubusercontent.com/xboxyshop/xboxy/main/loghi-carte-di_credito.png?v=20261023-ma" alt="Carte e metodi di pagamento accettati" width="264" height="28" loading="eager" decoding="async">
+              <p class="upsell-note">Pagamento unico tramite SumUp. Ricevi 2 massaggiatori viso e 2 beauty case in omaggio con spedizione gratuita.</p>
             </div>
             <div class="upsell-media" aria-label="Prodotti inclusi nell'offerta combinata">
               <div class="upsell-product"><img src="https://cdn.jsdelivr.net/gh/xboxyshop/xboxy@main/massaggiatore-viso-golden-pulse-poster.jpg?v=20261021" alt="Beauty Bar 24K Golden Pulse, massaggiatore viso dorato" width="360" height="640" loading="lazy" decoding="async"><span>2 × Massaggiatore viso</span></div>
