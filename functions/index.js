@@ -4,7 +4,7 @@ export async function onRequest(context) {
 
   // Thank-you page for the MaGlowt facial massager.
   if (host === "ma.xboxy.shop" && (url.pathname === "/thank-you" || url.pathname === "/thank-you/")) {
-    const target = new URL("/ma/thank-you/index.html" + url.search, url);
+    const target = new URL("/thank-you/index.html" + url.search, url);
     return context.env.ASSETS.fetch(new Request(target.toString(), context.request));
   }
 
