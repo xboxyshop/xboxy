@@ -155,6 +155,17 @@
 .trust-card a{font-weight:800;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:760px){.trust-section{padding:34px 0 42px}.trust-section .wrap{width:min(var(--max,1180px),calc(100% - 28px))}.trust-grid{grid-template-columns:1fr;gap:13px}.trust-card{padding:25px 20px;border-radius:22px}.trust-icon{width:60px;height:60px;margin-bottom:15px}.trust-card h3{font-size:1.08rem}.trust-card p{font-size:.9rem}}
 
+
+    /* Promo bundle Lumi Pocket */
+    .bundle-offer{margin:70px 0;padding:clamp(22px,4vw,48px);border-radius:32px;background:var(--paper);border:2px solid var(--ink);box-shadow:var(--shadow)}
+    .bundle-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+    .bundle-media{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+    .bundle-media img,.bundle-media video{display:block;width:100%;border-radius:20px;border:1px solid var(--line);background:#fff;object-fit:cover}
+    .bundle-media img{aspect-ratio:1/1}.bundle-media video{aspect-ratio:9/16;max-height:390px}
+    .bundle-price{font-size:clamp(2rem,5vw,3.2rem);font-weight:950;letter-spacing:-.05em;margin:16px 0 4px}
+    .bundle-shipping{font-weight:800;margin:0 0 20px}
+    .bundle-note{font-size:.9rem;color:var(--muted);margin-top:12px}
+    @media(max-width:760px){.bundle-grid{grid-template-columns:1fr}.bundle-media{gap:8px}.bundle-offer{margin:48px 0}.bundle-media video{max-height:330px}}
 </style>
   <!-- HERO VIDEO ASSETS: xboxy_hero_specchio_led.mp4 + xboxy_hero_specchio_led_poster.jpg (keep alongside this HTML or update src/poster to hosted URLs). -->
   <link rel="icon" type="image/png" href="/favicon.png?v=20261018-2" sizes="64x64">
@@ -281,6 +292,27 @@
             <p class="review-quote">La dimostrazione mostra le due superfici, quella normale e quella con ingrandimento 10X, oltre al LED regolabile, al pulsante di controllo e alla porta di ricarica USB-C.</p>
             <div class="review-author"><strong>Sabri</strong></div>
           </article>
+        </div>
+      </section>
+
+      <section class="bundle-offer" id="promo-pennelli" aria-labelledby="bundle-title">
+        <div class="bundle-grid">
+          <div class="bundle-media">
+            <img src="/le/set_pennelli-make-up.jpg" alt="Set di pennelli per il trucco incluso in omaggio con Lumi Pocket" loading="lazy" width="1001" height="1001">
+            <video controls playsinline preload="metadata" aria-label="Video dimostrativo della promozione Lumi Pocket e set pennelli trucco">
+              <source src="/le/specchietto-luce-led-03.mp4" type="video/mp4">
+              Il tuo browser non supporta la riproduzione video.
+            </video>
+          </div>
+          <div class="bundle-copy">
+            <div class="kicker">OFFERTA BEAUTY</div>
+            <h2 id="bundle-title">Lumi Pocket + set pennelli trucco in omaggio.</h2>
+            <p>Il tuo specchietto LED portatile per il makeup, insieme a un set di pennelli per il trucco in omaggio.</p>
+            <div class="bundle-price">€24,99</div>
+            <p class="bundle-shipping">Spese di spedizione incluse.</p>
+            <p class="bundle-note">Offerta combinata: specchietto LED da trucco e set di pennelli in omaggio.</p>
+            <!-- Inserire qui il pulsante di acquisto quando sarà disponibile il link di pagamento dedicato da €24,99. -->
+          </div>
         </div>
       </section>
 
