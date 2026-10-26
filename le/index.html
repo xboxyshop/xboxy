@@ -165,7 +165,10 @@
     .bundle-media{min-width:0}
     .bundle-media{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:center}
     .bundle-media img,.bundle-media video{display:block;width:100%;border-radius:20px;border:1px solid var(--line);background:#fff;object-fit:cover}
-    .bundle-media img{aspect-ratio:1/1}.bundle-media video{aspect-ratio:9/16;max-height:390px}
+    .bundle-media img{aspect-ratio:1/1;height:auto}.bundle-media video{aspect-ratio:9/16;max-height:390px}
+    .bundle-countdown{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:16px 0 22px}
+    .bundle-countdown span{display:inline-block;background:var(--ink);color:#fff;border-radius:12px;padding:10px 13px;font-weight:900;font-variant-numeric:tabular-nums;font-size:1.25rem}
+    .bundle-countdown-label{font-size:.88rem;font-weight:800;margin:14px 0 0}
     .bundle-price{font-size:clamp(2rem,5vw,3.2rem);font-weight:950;letter-spacing:-.05em;margin:16px 0 4px}
     .bundle-shipping{font-weight:800;margin:0 0 20px}
     .bundle-note{font-size:.9rem;color:var(--muted);margin-top:12px}
@@ -314,6 +317,8 @@
             <p>Il tuo specchietto LED portatile per il makeup, insieme a un set di pennelli per il trucco in omaggio.</p>
             <div class="bundle-price">€24,99</div>
             <p class="bundle-shipping">Spese di spedizione incluse.</p>
+            <p class="bundle-countdown-label">Countdown giornaliero</p>
+            <div class="bundle-countdown" role="timer" aria-label="Tempo mancante alla mezzanotte"><span id="bundle-hh">--</span> : <span id="bundle-mm">--</span> : <span id="bundle-ss">--</span></div>
             <p class="bundle-note">Offerta combinata: specchietto LED da trucco e set di pennelli in omaggio.</p>
             <!-- Inserire qui il pulsante di acquisto quando sarà disponibile il link di pagamento dedicato da €24,99. -->
           </div>
@@ -384,5 +389,13 @@
   <div class="mobile-buy"><a class="button" href="https://pay.sumup.com/b2c/QH868S6X">Acquista ora · €14,99 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 <div id="xboxy-cookie-banner" class="cookie-banner" role="region" aria-label="Preferenze cookie" aria-live="polite"><h2>La tua privacy, le tue scelte.</h2><p>Usiamo cookie tecnici necessari al funzionamento del sito. Con il tuo permesso, le categorie facoltative potranno essere usate per statistiche e marketing. Al momento non sono collegati strumenti di analisi o pubblicità a queste categorie. Puoi accettare, rifiutare o personalizzare la scelta senza impedire la navigazione. <a href="https://xboxy.shop/privacy-policy.html">Privacy Policy</a> · <a href="https://xboxy.shop/cookie-policy.html">Cookie Policy</a></p><div class="cookie-actions"><button type="button" data-cookie-action="reject">Rifiuta facoltativi</button><button type="button" data-cookie-action="customize" aria-controls="xboxy-cookie-settings">Personalizza</button><button type="button" data-cookie-action="accept">Accetta tutti</button></div><div id="xboxy-cookie-settings" class="cookie-settings" aria-hidden="true"><p>Le categorie facoltative sono disattivate finché non scegli. La scelta non attiva script di analisi o marketing non presenti sul sito.</p><label class="cookie-choice"><input type="checkbox" checked disabled><span><strong>Cookie tecnici necessari</strong><small>Sempre attivi. Servono al funzionamento essenziale e a ricordare le preferenze.</small></span></label><label class="cookie-choice"><input id="xboxy-cookie-statistics" type="checkbox"><span><strong>Statistiche</strong><small>Consenti eventuali strumenti statistici solo se saranno integrati in futuro.</small></span></label><label class="cookie-choice"><input id="xboxy-cookie-marketing" type="checkbox"><span><strong>Marketing e profilazione</strong><small>Consenti eventuali strumenti pubblicitari solo se saranno integrati in futuro.</small></span></label><button class="cookie-save" type="button" data-cookie-action="save">Salva le mie preferenze</button></div></div>
 <script>(function(){"use strict";var N="xboxy_consent_v1",AGE=15552000,b,s,st,ma;function host(){var h=location.hostname;return h==="xboxy.shop"||h.endsWith(".xboxy.shop")}function read(){var m=document.cookie.match(new RegExp("(?:^|; )"+N+"=([^;]*)")),v=null;if(!m)return null;try{v=JSON.parse(decodeURIComponent(m[1]))}catch(e){return null}return v&&v.version===1&&typeof v.necessary==="boolean"?v:null}function store(v){v.version=1;v.updatedAt=new Date().toISOString();var c=N+"="+encodeURIComponent(JSON.stringify(v))+"; Path=/; Max-Age="+AGE+"; SameSite=Lax";if(location.protocol==="https:")c+="; Secure";if(host())c+="; Domain=.xboxy.shop";document.cookie=c}function close(){b.classList.remove("is-visible")}function show(o){b.classList.add("is-visible");if(o){s.classList.add("is-open");s.setAttribute("aria-hidden","false")}}function sync(v){st.checked=!!(v&&v.statistics);ma.checked=!!(v&&v.marketing)}function init(){b=document.getElementById("xboxy-cookie-banner");if(!b)return;s=document.getElementById("xboxy-cookie-settings");st=document.getElementById("xboxy-cookie-statistics");ma=document.getElementById("xboxy-cookie-marketing");var v=read();sync(v);if(!v)show(false);document.querySelectorAll("[data-cookie-action]").forEach(function(x){x.addEventListener("click",function(){var a=x.getAttribute("data-cookie-action");if(a==="accept"){store({necessary:true,statistics:true,marketing:true});close()}if(a==="reject"){store({necessary:true,statistics:false,marketing:false});close()}if(a==="customize"){var o=!s.classList.contains("is-open");s.classList.toggle("is-open",o);s.setAttribute("aria-hidden",o?"false":"true");if(o)sync(read())}if(a==="save"){store({necessary:true,statistics:!!st.checked,marketing:!!ma.checked});close()}})});document.querySelectorAll(".cookie-manage-link").forEach(function(x){x.addEventListener("click",function(e){e.preventDefault();sync(read());show(true)})})}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init()})();</script>
+<script>
+(function(){
+  const h=document.getElementById('bundle-hh'),m=document.getElementById('bundle-mm'),sec=document.getElementById('bundle-ss');
+  if(!h||!m||!sec)return;
+  function tick(){const now=new Date(),midnight=new Date(now);midnight.setHours(24,0,0,0);let left=Math.max(0,Math.floor((midnight-now)/1000));h.textContent=String(Math.floor(left/3600)).padStart(2,'0');m.textContent=String(Math.floor(left%3600/60)).padStart(2,'0');sec.textContent=String(left%60).padStart(2,'0');}
+  tick();setInterval(tick,1000);
+})();
+</script>
 </body>
 </html>
