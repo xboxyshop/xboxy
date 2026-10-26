@@ -157,6 +157,17 @@
 
 
     /* Promo bundle Lumi Pocket */
+    .bundle-offer{background:var(--lilac)!important;box-shadow:8px 8px 0 var(--ink)!important}
+    .bundle-value{display:inline-flex;background:var(--lime);border:1px solid var(--ink);border-radius:99px;padding:10px 15px;color:#5b37a3;font-size:.82rem;font-weight:950;letter-spacing:.045em;text-transform:uppercase}
+    .bundle-timer-panel{background:#111;color:#fff;border-radius:24px;padding:20px 22px;margin:20px 0 18px}
+    .bundle-timer-panel .bundle-countdown-label{color:var(--lime);margin:0 0 12px;letter-spacing:.04em;text-transform:uppercase}
+    .bundle-timer-panel .bundle-countdown{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0}
+    .bundle-timer-panel .bundle-countdown .time-box{background:#252525;border:1px solid #414141;border-radius:15px;padding:12px 5px;text-align:center}
+    .bundle-timer-panel .bundle-countdown .time-box strong{display:block;font-size:clamp(1.5rem,3vw,2.5rem);font-variant-numeric:tabular-nums;line-height:1.2}
+    .bundle-timer-panel .bundle-countdown .time-box small{display:block;font-size:.7rem;letter-spacing:.06em;margin-top:5px}
+    .bundle-cta{display:inline-flex;align-items:center;justify-content:center;background:var(--lime);color:#111;border:2px solid #111;border-radius:999px;padding:16px 24px;font-weight:900;box-shadow:5px 5px 0 #111;margin:16px 0;cursor:not-allowed;opacity:.8}
+    .bundle-media img{align-self:center}
+
     .bundle-offer{margin:70px 0;padding:clamp(22px,4vw,48px);border-radius:32px;background:var(--paper);border:2px solid var(--ink);box-shadow:var(--shadow)}
     .bundle-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(20px,3vw,38px);align-items:center;min-width:0}
     .bundle-media,.bundle-copy{min-width:0;max-width:100%}
@@ -312,13 +323,13 @@
             </video>
           </div>
           <div class="bundle-copy">
-            <div class="kicker">OFFERTA BEAUTY</div>
+            <div class="bundle-value">Set di pennelli trucco · valore €17,99</div>
             <h2 id="bundle-title">Lumi Pocket + set pennelli trucco in omaggio.</h2>
             <p>Il tuo specchietto LED portatile per il makeup, insieme a un set di pennelli per il trucco in omaggio.</p>
             <div class="bundle-price">€24,99</div>
             <p class="bundle-shipping">Spese di spedizione incluse.</p>
-            <p class="bundle-countdown-label">Countdown giornaliero</p>
-            <div class="bundle-countdown" role="timer" aria-label="Tempo mancante alla mezzanotte"><span id="bundle-hh">--</span> : <span id="bundle-mm">--</span> : <span id="bundle-ss">--</span></div>
+            <div class="bundle-timer-panel"><p class="bundle-countdown-label">Tempo rimasto nella giornata</p><div class="bundle-countdown" role="timer" aria-label="Tempo mancante alla mezzanotte"><div class="time-box"><strong id="bundle-hh">--</strong><small>ORE</small></div><div class="time-box"><strong id="bundle-mm">--</strong><small>MIN</small></div><div class="time-box"><strong id="bundle-ss">--</strong><small>SEC</small></div></div></div>
+            <button type="button" class="bundle-cta" disabled title="Pagamento dell'offerta in preparazione">Approfitta dell’offerta →</button>
             <p class="bundle-note">Offerta combinata: specchietto LED da trucco e set di pennelli in omaggio.</p>
             <!-- Inserire qui il pulsante di acquisto quando sarà disponibile il link di pagamento dedicato da €24,99. -->
           </div>
