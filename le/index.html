@@ -158,14 +158,18 @@
 
     /* Promo bundle Lumi Pocket */
     .bundle-offer{margin:70px 0;padding:clamp(22px,4vw,48px);border-radius:32px;background:var(--paper);border:2px solid var(--ink);box-shadow:var(--shadow)}
-    .bundle-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
-    .bundle-media{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+    .bundle-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(20px,3vw,38px);align-items:center;min-width:0}
+    .bundle-media,.bundle-copy{min-width:0;max-width:100%}
+    .bundle-copy h2{font-size:clamp(1.65rem,2.7vw,2.8rem);line-height:1.12;letter-spacing:-.035em;overflow-wrap:break-word;margin:12px 0 18px}
+    .bundle-copy p{overflow-wrap:break-word;line-height:1.55}
+    .bundle-media{min-width:0}
+    .bundle-media{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:center}
     .bundle-media img,.bundle-media video{display:block;width:100%;border-radius:20px;border:1px solid var(--line);background:#fff;object-fit:cover}
     .bundle-media img{aspect-ratio:1/1}.bundle-media video{aspect-ratio:9/16;max-height:390px}
     .bundle-price{font-size:clamp(2rem,5vw,3.2rem);font-weight:950;letter-spacing:-.05em;margin:16px 0 4px}
     .bundle-shipping{font-weight:800;margin:0 0 20px}
     .bundle-note{font-size:.9rem;color:var(--muted);margin-top:12px}
-    @media(max-width:760px){.bundle-grid{grid-template-columns:1fr}.bundle-media{gap:8px}.bundle-offer{margin:48px 0}.bundle-media video{max-height:330px}}
+    @media(max-width:900px){.bundle-grid{grid-template-columns:minmax(0,1fr)}.bundle-media{gap:8px}.bundle-offer{margin:48px 0}.bundle-media video{max-height:330px}}
 </style>
   <!-- HERO VIDEO ASSETS: xboxy_hero_specchio_led.mp4 + xboxy_hero_specchio_led_poster.jpg (keep alongside this HTML or update src/poster to hosted URLs). -->
   <link rel="icon" type="image/png" href="/favicon.png?v=20261018-2" sizes="64x64">
