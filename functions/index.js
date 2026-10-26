@@ -8,5 +8,9 @@ export async function onRequest(context) {
     const target = new URL("/" + folder + "/", url);
     return context.env.ASSETS.fetch(new Request(target.toString(), context.request));
   }
+  if (host === "le.xboxy.shop" && (url.pathname === "/set_pennelli-make-up.jpg" || url.pathname === "/specchietto-luce-led-03.mp4")) {
+    const target = new URL("/le" + url.pathname, url);
+    return context.env.ASSETS.fetch(new Request(target.toString(), context.request));
+  }
   return context.next();
 }
