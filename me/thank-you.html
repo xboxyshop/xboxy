@@ -48,6 +48,49 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-s
 .thankyou-legal-links a{color:var(--muted);font-size:.82rem;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:740px){.thankyou-legal-links{gap:12px 18px}}
 </style>
+<!-- TikTok Pixel: PageView only. Purchase requires verified PayPal confirmation. -->
+<!-- TikTok Pixel DBS9MVBC77U9QJQDQ5QG: caricato solo con consenso marketing -->
+<script>
+(function(w,d){
+  "use strict";
+  var PIXEL_ID="DBS9MVBC77U9QJQDQ5QG";
+  var CONSENT_COOKIE="xboxy_consent_v1";
+  var loaded=false;
+  function hasMarketingConsent(){
+    var match=d.cookie.match(new RegExp("(?:^|; )"+CONSENT_COOKIE+"=([^;]*)"));
+    if(!match)return false;
+    try{var data=JSON.parse(decodeURIComponent(match[1]));return data.version===1&&data.marketing===true}
+    catch(e){return false}
+  }
+  function loadTikTok(){
+    if(loaded||!hasMarketingConsent())return;
+    loaded=true;
+    !function(w,d,t){
+      w.TiktokAnalyticsObject=t;
+      var ttq=w[t]=w[t]||[];
+      ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
+      ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
+      for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
+      ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e};
+      ttq.load=function(e,n){
+        var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;
+        ttq._i=ttq._i||{};ttq._i[e]=[];ttq._i[e]._u=r;ttq._t=ttq._t||{};ttq._t[e]=+new Date;
+        ttq._o=ttq._o||{};ttq._o[e]=n||{};
+        n=d.createElement("script");n.type="text/javascript";n.async=true;n.src=r+"?sdkid="+e+"&lib="+t;
+        e=d.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e);
+      };
+      ttq.load(PIXEL_ID);
+      ttq.page();
+    }(w,d,"ttq");
+  }
+  function onConsentChange(){
+    if(hasMarketingConsent()){loadTikTok();if(loaded&&w.ttq&&w.ttq.grantConsent)w.ttq.grantConsent()}
+    else if(loaded&&w.ttq&&w.ttq.revokeConsent){w.ttq.revokeConsent()}
+  }
+  w.addEventListener("xboxy:consent-changed",onConsentChange);
+  onConsentChange();
+})(window,document);
+</script>
 </head>
 <body>
 <div class="announcement">GRAZIE PER AVER SCELTO XBOXY</div>
@@ -81,6 +124,6 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-s
 <label class="cookie-choice"><input id="xboxy-cookie-marketing" type="checkbox"/><span><strong>Marketing e profilazione</strong><small>Consenti eventuali strumenti pubblicitari solo se integrati in futuro.</small></span></label>
 <button class="cookie-save" data-cookie-action="save" type="button">Salva le mie preferenze</button></div>
 </div>
-<script>(function(){"use strict";var N="xboxy_consent_v1",AGE=15552000,b,s,st,ma;function host(){var h=location.hostname;return h==="xboxy.shop"||h.endsWith(".xboxy.shop")}function read(){var m=document.cookie.match(new RegExp("(?:^|; )"+N+"=([^;]*)")),v=null;if(!m)return null;try{v=JSON.parse(decodeURIComponent(m[1]))}catch(e){return null}return v&&v.version===1&&typeof v.necessary==="boolean"?v:null}function store(v){v.version=1;v.updatedAt=new Date().toISOString();var c=N+"="+encodeURIComponent(JSON.stringify(v))+"; Path=/; Max-Age="+AGE+"; SameSite=Lax";if(location.protocol==="https:")c+="; Secure";if(host())c+="; Domain=.xboxy.shop";document.cookie=c}function close(){b.classList.remove("is-visible")}function show(o){b.classList.add("is-visible");if(o){s.classList.add("is-open");s.setAttribute("aria-hidden","false")}}function sync(v){st.checked=!!(v&&v.statistics);ma.checked=!!(v&&v.marketing)}function init(){b=document.getElementById("xboxy-cookie-banner");if(!b)return;s=document.getElementById("xboxy-cookie-settings");st=document.getElementById("xboxy-cookie-statistics");ma=document.getElementById("xboxy-cookie-marketing");var v=read();sync(v);if(!v)show(false);document.querySelectorAll("[data-cookie-action]").forEach(function(x){x.addEventListener("click",function(){var a=x.getAttribute("data-cookie-action");if(a==="accept"){store({necessary:true,statistics:true,marketing:true});close()}if(a==="reject"){store({necessary:true,statistics:false,marketing:false});close()}if(a==="customize"){var o=!s.classList.contains("is-open");s.classList.toggle("is-open",o);s.setAttribute("aria-hidden",o?"false":"true");if(o)sync(read())}if(a==="save"){store({necessary:true,statistics:!!st.checked,marketing:!!ma.checked});close()}})});document.querySelectorAll(".cookie-manage-link").forEach(function(x){x.addEventListener("click",function(e){e.preventDefault();sync(read());show(true)})})}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init()})();</script>
+<script>(function(){"use strict";var N="xboxy_consent_v1",AGE=15552000,b,s,st,ma;function host(){var h=location.hostname;return h==="xboxy.shop"||h.endsWith(".xboxy.shop")}function read(){var m=document.cookie.match(new RegExp("(?:^|; )"+N+"=([^;]*)")),v=null;if(!m)return null;try{v=JSON.parse(decodeURIComponent(m[1]))}catch(e){return null}return v&&v.version===1&&typeof v.necessary==="boolean"?v:null}function store(v){v.version=1;v.updatedAt=new Date().toISOString();var c=N+"="+encodeURIComponent(JSON.stringify(v))+"; Path=/; Max-Age="+AGE+"; SameSite=Lax";if(location.protocol==="https:")c+="; Secure";if(host())c+="; Domain=.xboxy.shop";document.cookie=c;window.dispatchEvent(new Event("xboxy:consent-changed"))}function close(){b.classList.remove("is-visible")}function show(o){b.classList.add("is-visible");if(o){s.classList.add("is-open");s.setAttribute("aria-hidden","false")}}function sync(v){st.checked=!!(v&&v.statistics);ma.checked=!!(v&&v.marketing)}function init(){b=document.getElementById("xboxy-cookie-banner");if(!b)return;s=document.getElementById("xboxy-cookie-settings");st=document.getElementById("xboxy-cookie-statistics");ma=document.getElementById("xboxy-cookie-marketing");var v=read();sync(v);if(!v)show(false);document.querySelectorAll("[data-cookie-action]").forEach(function(x){x.addEventListener("click",function(){var a=x.getAttribute("data-cookie-action");if(a==="accept"){store({necessary:true,statistics:true,marketing:true});close()}if(a==="reject"){store({necessary:true,statistics:false,marketing:false});close()}if(a==="customize"){var o=!s.classList.contains("is-open");s.classList.toggle("is-open",o);s.setAttribute("aria-hidden",o?"false":"true");if(o)sync(read())}if(a==="save"){store({necessary:true,statistics:!!st.checked,marketing:!!ma.checked});close()}})});document.querySelectorAll(".cookie-manage-link").forEach(function(x){x.addEventListener("click",function(e){e.preventDefault();sync(read());show(true)})})}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init()})();</script>
 </body>
 </html>
